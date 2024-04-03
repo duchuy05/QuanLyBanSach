@@ -16,5 +16,16 @@ namespace QuanLyBanSach
         {
             InitializeComponent();
         }
+
+        private void btnDangnhap_Click(object sender, EventArgs e)
+        {
+            if (txtTaikhoan.Text == "ddh" && txtMatkhau.Text == "1")
+            {
+                MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } else
+            {
+                MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
