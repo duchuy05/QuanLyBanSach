@@ -64,7 +64,7 @@
             this.txtTaikhoan.Name = "txtTaikhoan";
             this.txtTaikhoan.Size = new System.Drawing.Size(304, 22);
             this.txtTaikhoan.TabIndex = 2;
-            this.txtTaikhoan.TextChanged += new System.EventHandler(this.txtTaikhoan_TextChanged);
+            //this.txtTaikhoan.TextChanged += new System.EventHandler(this.txtTaikhoan_TextChanged);
             // 
             // txtMatkhau
             // 
