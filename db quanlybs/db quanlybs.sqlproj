@@ -139,5 +139,9 @@
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
+    <Build Include="dbo\Tables\tblPhieunhap.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="db quanlybs.refactorlog" />
   </ItemGroup>
 </Project>
