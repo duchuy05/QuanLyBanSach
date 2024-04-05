@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[tblNXB] (
+    [MaNXB]  NCHAR (10)    NOT NULL,
+    [TenNXB] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([MaNXB] ASC)
+);
+
