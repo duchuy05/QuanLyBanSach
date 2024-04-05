@@ -34,6 +34,8 @@
             this.txtMatkhau = new System.Windows.Forms.TextBox();
             this.lblTaikhoan = new System.Windows.Forms.Label();
             this.lblMatkhau = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDangnhap
@@ -54,6 +56,7 @@
             this.btnThoat.TabIndex = 1;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // txtTaikhoan
             // 
@@ -87,11 +90,20 @@
             this.lblMatkhau.TabIndex = 5;
             this.lblMatkhau.Text = "Mật khẩu";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(219, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(234, 173);
+            this.dataGridView1.TabIndex = 6;
+            // 
             // frmDangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblMatkhau);
             this.Controls.Add(this.lblTaikhoan);
             this.Controls.Add(this.txtMatkhau);
@@ -100,6 +112,8 @@
             this.Controls.Add(this.btnDangnhap);
             this.Name = "frmDangnhap";
             this.Text = "frmDangnhap";
+            this.Load += new System.EventHandler(this.frmDangnhap_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,6 +127,7 @@
         private System.Windows.Forms.TextBox txtMatkhau;
         private System.Windows.Forms.Label lblTaikhoan;
         private System.Windows.Forms.Label lblMatkhau;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
