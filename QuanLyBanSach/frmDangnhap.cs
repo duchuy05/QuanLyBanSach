@@ -47,7 +47,7 @@ namespace QuanLyBanSach
         {
             try { 
                 con.Open();
-                cmd = new SqlCommand("select * from Sach", con);
+                cmd = new SqlCommand("select * from tblNCC", con);
                 adt = new SqlDataAdapter(cmd);
                 adt.Fill(dt);
                 dataGridView1.DataSource = dt;
