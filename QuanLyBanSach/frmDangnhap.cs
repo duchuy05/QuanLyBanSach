@@ -13,7 +13,7 @@ namespace QuanLyBanSach
 {
     public partial class frmDangnhap : Form
     {
-        string connectstring = @"Data Source=DESKTOP-8RVVUAJ\SQLEXPRESS;Initial Catalog=QLBS;Integrated Security=True";
+        string connectstring = @"Data Source=MSI\MSSQLSERVER01;Initial Catalog=dbdotnetqlbs;Integrated Security=True";
         SqlConnection con;
         SqlCommand cmd;
         SqlDataAdapter adt;
