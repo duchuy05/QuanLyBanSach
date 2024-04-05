@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyBanSach", "QuanLyBanSach\QuanLyBanSach.csproj", "{966782A9-F6E3-478C-B0D9-7C73887F808E}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DBQLBS", "DBQLBS\DBQLBS.sqlproj", "{543C444D-ECAA-4FCE-9F6B-69926D622029}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{966782A9-F6E3-478C-B0D9-7C73887F808E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{966782A9-F6E3-478C-B0D9-7C73887F808E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{966782A9-F6E3-478C-B0D9-7C73887F808E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{543C444D-ECAA-4FCE-9F6B-69926D622029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{543C444D-ECAA-4FCE-9F6B-69926D622029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{543C444D-ECAA-4FCE-9F6B-69926D622029}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{543C444D-ECAA-4FCE-9F6B-69926D622029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{543C444D-ECAA-4FCE-9F6B-69926D622029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{543C444D-ECAA-4FCE-9F6B-69926D622029}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
