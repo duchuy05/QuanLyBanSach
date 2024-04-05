@@ -134,7 +134,6 @@
     <Content Include="QLBS.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="qlbsdotnet.sql" />
     <Content Include="QLBS_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QLBS.mdf</DependentUpon>
