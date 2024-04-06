@@ -13,7 +13,7 @@ namespace QuanLyBanSach
 {
     public partial class frmDangnhap : Form
     {
-        string connectstring = @"Data Source=MSI\MSSQLSERVER01;Initial Catalog=dbdotnetqlbs;Integrated Security=True";
+        string connectstring = @"Data Source=""192.168.20.104, 1435"";Initial Catalog=QLBS;Persist Security Info=True;User ID=sa;Password=1";
         SqlConnection con;
         SqlCommand cmd;
         SqlDataAdapter adt;
@@ -47,7 +47,7 @@ namespace QuanLyBanSach
         {
             try { 
                 con.Open();
-                cmd = new SqlCommand("select * from tblNCC", con);
+                cmd = new SqlCommand("select * from Sach", con);
                 adt = new SqlDataAdapter(cmd);
                 adt.Fill(dt);
                 dataGridView1.DataSource = dt;
