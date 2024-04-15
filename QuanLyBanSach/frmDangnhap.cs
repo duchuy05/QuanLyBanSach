@@ -26,7 +26,7 @@ namespace QuanLyBanSach
         private void btnDangnhap_Click(object sender, EventArgs e)
         { 
 
-            if (txtTaikhoan.Text == "ddh" && txtMatkhau.Text == "1")
+            if (txtTaikhoan.Text == "duchuy" && txtMatkhau.Text == "1")
             {
                 MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmTongquat a = new frmTongquat();
