@@ -10,6 +10,8 @@
 *.userosscache
 *.sln.docstates
 *.cs.frmDangnhap
+*.cs.frmDangnhap.Designer
+*.resx.frmDangnhap
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
