@@ -50,14 +50,20 @@
   <ItemGroup>
     <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
@@ -74,65 +80,45 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Functions.cs" />
-    <Compile Include="FluentDesignForm1.cs">
+    <Compile Include="Forms\frmDangnhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FluentDesignForm1.Designer.cs">
-      <DependentUpon>FluentDesignForm1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormHuy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormHuy.Designer.cs">
-      <DependentUpon>FormHuy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDangnhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDangnhap.Designer.cs">
+    <Compile Include="Forms\frmDangnhap.Designer.cs">
       <DependentUpon>frmDangnhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTaotk.cs">
+    <Compile Include="Forms\frmSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTaotk.Designer.cs">
-      <DependentUpon>frmTaotk.cs</DependentUpon>
+    <Compile Include="Forms\frmSach.Designer.cs">
+      <DependentUpon>frmSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTongquat.cs">
+    <Compile Include="Forms\frmTacgia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTongquat.Designer.cs">
-      <DependentUpon>frmTongquat.cs</DependentUpon>
+    <Compile Include="Forms\frmTacgia.Designer.cs">
+      <DependentUpon>frmTacgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmthietke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmthietke.Designer.cs">
+      <DependentUpon>frmthietke.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="vy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vy.Designer.cs">
-      <DependentUpon>vy.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormHuy.resx">
-      <DependentUpon>FormHuy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDangnhap.resx">
+    <EmbeddedResource Include="Forms\frmDangnhap.resx">
       <DependentUpon>frmDangnhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTaotk.resx">
-      <DependentUpon>frmTaotk.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmSach.resx">
+      <DependentUpon>frmSach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTongquat.resx">
-      <DependentUpon>frmTongquat.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmTacgia.resx">
+      <DependentUpon>frmTacgia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmthietke.resx">
+      <DependentUpon>frmthietke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -142,9 +128,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="vy.resx">
-      <DependentUpon>vy.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -169,7 +153,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Forms\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
