@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyBanSach
+namespace QuanLyBanSach.Forms
 {
-    public partial class Form2 : Form
+    public partial class frmDangnhap : Form
     {
-        public Form2()
+        public frmDangnhap()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
 
         }
