@@ -38,9 +38,10 @@
             // 
             // btnDongy
             // 
-            this.btnDongy.Location = new System.Drawing.Point(287, 359);
+            this.btnDongy.Location = new System.Drawing.Point(257, 441);
+            this.btnDongy.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnDongy.Name = "btnDongy";
-            this.btnDongy.Size = new System.Drawing.Size(75, 23);
+            this.btnDongy.Size = new System.Drawing.Size(150, 44);
             this.btnDongy.TabIndex = 0;
             this.btnDongy.Text = "Đồng ý";
             this.btnDongy.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(421, 359);
+            this.btnThoat.Location = new System.Drawing.Point(525, 441);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Size = new System.Drawing.Size(150, 44);
             this.btnThoat.TabIndex = 1;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -58,46 +60,51 @@
             // lblTentk
             // 
             this.lblTentk.AutoSize = true;
-            this.lblTentk.Location = new System.Drawing.Point(247, 201);
+            this.lblTentk.Location = new System.Drawing.Point(177, 138);
+            this.lblTentk.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTentk.Name = "lblTentk";
-            this.lblTentk.Size = new System.Drawing.Size(73, 13);
+            this.lblTentk.Size = new System.Drawing.Size(143, 25);
             this.lblTentk.TabIndex = 2;
             this.lblTentk.Text = "Tên tài khoản";
             // 
             // lblMatkhau
             // 
             this.lblMatkhau.AutoSize = true;
-            this.lblMatkhau.Location = new System.Drawing.Point(247, 247);
+            this.lblMatkhau.Location = new System.Drawing.Point(177, 226);
+            this.lblMatkhau.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblMatkhau.Name = "lblMatkhau";
-            this.lblMatkhau.Size = new System.Drawing.Size(52, 13);
+            this.lblMatkhau.Size = new System.Drawing.Size(101, 25);
             this.lblMatkhau.TabIndex = 3;
             this.lblMatkhau.Text = "Mật khẩu";
             // 
             // txtTentk
             // 
-            this.txtTentk.Location = new System.Drawing.Point(341, 198);
+            this.txtTentk.Location = new System.Drawing.Point(365, 132);
+            this.txtTentk.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtTentk.Name = "txtTentk";
-            this.txtTentk.Size = new System.Drawing.Size(226, 20);
+            this.txtTentk.Size = new System.Drawing.Size(448, 31);
             this.txtTentk.TabIndex = 4;
             // 
             // txtMatkhau
             // 
-            this.txtMatkhau.Location = new System.Drawing.Point(341, 247);
+            this.txtMatkhau.Location = new System.Drawing.Point(365, 226);
+            this.txtMatkhau.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtMatkhau.Name = "txtMatkhau";
-            this.txtMatkhau.Size = new System.Drawing.Size(226, 20);
+            this.txtMatkhau.Size = new System.Drawing.Size(448, 31);
             this.txtMatkhau.TabIndex = 5;
             // 
             // frmTaotk
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(971, 590);
             this.Controls.Add(this.txtMatkhau);
             this.Controls.Add(this.txtTentk);
             this.Controls.Add(this.lblMatkhau);
             this.Controls.Add(this.lblTentk);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDongy);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmTaotk";
             this.Text = "frmTaotk";
             this.ResumeLayout(false);
