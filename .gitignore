@@ -9,6 +9,9 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.cs.frmDangnhap
+*.cs.frmDangnhap.Designer
+*.resx.frmDangnhap
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -361,3 +364,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/QuanLyBanSach/frmDangnhap.cs
+/QuanLyBanSach/frmDangnhap.Designer.cs
+/QuanLyBanSach/frmDangnhap.resx
+/QuanLyBanSach/Program.cs
+/QuanLyBanSach/Class/Functions.cs
