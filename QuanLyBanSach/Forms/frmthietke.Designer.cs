@@ -318,9 +318,9 @@
             this.guna2PictureBox1.ErrorImage = null;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-25, -24);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-30, -49);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(275, 133);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(301, 158);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
