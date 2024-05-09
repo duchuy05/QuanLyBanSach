@@ -90,7 +90,6 @@
             this.btnHDxuat.Size = new System.Drawing.Size(225, 52);
             this.btnHDxuat.TabIndex = 5;
             this.btnHDxuat.Text = "Quản lý hóa đơn xuất";
-            this.btnHDxuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnKm
             // 
@@ -108,7 +107,6 @@
             this.btnKm.Size = new System.Drawing.Size(223, 42);
             this.btnKm.TabIndex = 12;
             this.btnKm.Text = "Quản lý khuyến mãi";
-            this.btnKm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnLogout
             // 
@@ -144,7 +142,6 @@
             this.btnKhach.Size = new System.Drawing.Size(223, 42);
             this.btnKhach.TabIndex = 9;
             this.btnKhach.Text = "Quản lý khách hàng";
-            this.btnKhach.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnNhanvien
             // 
@@ -162,7 +159,6 @@
             this.btnNhanvien.Size = new System.Drawing.Size(223, 42);
             this.btnNhanvien.TabIndex = 8;
             this.btnNhanvien.Text = "Quản lý nhân viên";
-            this.btnNhanvien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnBaocao
             // 
@@ -175,7 +171,7 @@
             this.btnBaocao.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnBaocao.ForeColor = System.Drawing.Color.Black;
             this.btnBaocao.Image = ((System.Drawing.Image)(resources.GetObject("btnBaocao.Image")));
-            this.btnBaocao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBaocao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnBaocao.ImageSize = new System.Drawing.Size(40, 40);
             this.btnBaocao.Location = new System.Drawing.Point(0, 508);
             this.btnBaocao.Margin = new System.Windows.Forms.Padding(2);
@@ -183,7 +179,6 @@
             this.btnBaocao.Size = new System.Drawing.Size(223, 42);
             this.btnBaocao.TabIndex = 7;
             this.btnBaocao.Text = "Báo cáo thống kê";
-            this.btnBaocao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnTaikhoan
             // 
@@ -201,7 +196,6 @@
             this.btnTaikhoan.Size = new System.Drawing.Size(223, 42);
             this.btnTaikhoan.TabIndex = 6;
             this.btnTaikhoan.Text = "Quản lý tài khoản";
-            this.btnTaikhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnHDnhap
             // 
@@ -219,7 +213,6 @@
             this.btnHDnhap.Size = new System.Drawing.Size(223, 42);
             this.btnHDnhap.TabIndex = 4;
             this.btnHDnhap.Text = "Quản lý hóa đơn nhập";
-            this.btnHDnhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnNxb
             // 
@@ -237,7 +230,6 @@
             this.btnNxb.Size = new System.Drawing.Size(223, 42);
             this.btnNxb.TabIndex = 3;
             this.btnNxb.Text = "Quản lý nhà xuất bản";
-            this.btnNxb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnLoaisach
             // 
@@ -255,7 +247,6 @@
             this.btnLoaisach.Size = new System.Drawing.Size(223, 42);
             this.btnLoaisach.TabIndex = 2;
             this.btnLoaisach.Text = "Quản lý loại sách";
-            this.btnLoaisach.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnSach
             // 
@@ -268,7 +259,7 @@
             this.btnSach.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSach.ForeColor = System.Drawing.Color.Black;
             this.btnSach.Image = ((System.Drawing.Image)(resources.GetObject("btnSach.Image")));
-            this.btnSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnSach.ImageSize = new System.Drawing.Size(40, 40);
             this.btnSach.Location = new System.Drawing.Point(0, 83);
             this.btnSach.Margin = new System.Windows.Forms.Padding(2);
@@ -295,7 +286,6 @@
             this.btnTacgia.Size = new System.Drawing.Size(223, 42);
             this.btnTacgia.TabIndex = 1;
             this.btnTacgia.Text = "Quản lý tác giả";
-            this.btnTacgia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnTacgia.Click += new System.EventHandler(this.btnTacgia_Click);
             // 
             // guna2PictureBox1
