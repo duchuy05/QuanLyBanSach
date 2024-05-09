@@ -108,5 +108,20 @@ namespace QuanLyBanSach.Forms
         {
 
         }
+
+        private void btnLoaisach_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHDnhap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNhanvien_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
