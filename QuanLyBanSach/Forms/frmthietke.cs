@@ -133,5 +133,12 @@ namespace QuanLyBanSach.Forms
             if (logouted)
                 Application.Exit();
         }
+
+        private void btnTaikhoan_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnTaikhoan.Text;
+
+            container(new frmTaikhoan());
+        }
     }
 }
