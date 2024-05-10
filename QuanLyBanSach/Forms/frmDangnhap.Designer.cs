@@ -119,7 +119,8 @@
             this.Controls.Add(this.txtTaikhoan);
             this.Controls.Add(this.btnDangnhap);
             this.Name = "frmDangnhap";
-            this.Text = "frmDangnhap";
+            this.Text = "Trang đăng nhập";
+            this.Load += new System.EventHandler(this.frmDangnhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.Internal.WinApi.Windows.UI.Notifications;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,14 @@ namespace QuanLyBanSach.Forms
 {
     public partial class frmthietke : Form
     {
+        public bool logouted = true;
         public frmthietke()
         {
             InitializeComponent();
             this.Resize += new EventHandler(ResizeForm);
         }
+
+        public event EventHandler DangXuat;
 
         private void ResizeForm(object sender, EventArgs e)
         {
@@ -46,7 +50,7 @@ namespace QuanLyBanSach.Forms
 
         private void btnSach_Click(object sender, EventArgs e)
         {
-            lbl_val.Text = "Quản lý Sách";
+            lbl_val.Text = btnSach.Text;
 
             container(new frmSach());
 
@@ -78,7 +82,7 @@ namespace QuanLyBanSach.Forms
 
         private void btnTacgia_Click(object sender, EventArgs e)
         {
-            lbl_val.Text = "Quản lý Tác giả";
+            lbl_val.Text = btnTacgia.Text;
 
             container(new frmTacgia());
         }
@@ -88,10 +92,10 @@ namespace QuanLyBanSach.Forms
 
         }
 
-        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            frmDangnhap frmDangnhap = new frmDangnhap();
-            frmDangnhap.ShowDialog();
+            DangXuat(this, new EventArgs());
+
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
@@ -122,6 +126,12 @@ namespace QuanLyBanSach.Forms
         private void btnNhanvien_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmthietke_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (logouted)
+                Application.Exit();
         }
     }
 }
