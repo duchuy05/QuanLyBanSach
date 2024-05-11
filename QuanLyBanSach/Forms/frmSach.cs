@@ -73,7 +73,7 @@ namespace QuanLyBanSach.Forms
             cboManxb.SelectedIndex = -1;
             txtSoluong.Text = "0";
             txtGianhap.Text = "0";
-            txtGiaban.Text = "";  
+            txtGiaban.Enabled = false;  
             txtSoluong.Enabled = false;
             txtGianhap.Enabled = false;
             txtSotrang.Text = "";
@@ -106,8 +106,17 @@ MessageBoxIcon.Information);
             maloai = datagridviewSach.CurrentRow.Cells["Maloai"].Value.ToString();
             matacgia = datagridviewSach.CurrentRow.Cells["Matacgia"].Value.ToString();
             manxb = datagridviewSach.CurrentRow.Cells["Manxb"].Value.ToString();
-            //txtAnh.Text = Functions.GetFieldValues("SELECT Anh FROM tblSach WHERE Masach = N'" + txtMasach.Text + "'");
-            //picAnh.Image = Image.FromFile(txtAnh.Text);
+            txtAnh.Text = Functions.GetFieldValues("SELECT Anh FROM tblSach WHERE Masach = N'" + txtMasach.Text + "'");
+            if (!string.IsNullOrWhiteSpace(txtAnh.Text))
+            {
+                // Load the image if the file exists
+                picAnh.Image = Image.FromFile(txtAnh.Text);
+            }
+            else
+            {
+                // Clear the image if the file does not exist or the path is empty
+                picAnh.Image = null;
+            }
             cboMaloai.Text = Class.Functions.GetFieldValues("SELECT Tenloai FROM tblLoaisach WHERE Maloai = N'" + maloai + "'");
             cboMatacgia.Text = Class.Functions.GetFieldValues("SELECT Tentacgia FROM tblTacgia WHERE Matacgia = N'" + matacgia + "'");
             cboManxb.Text = Class.Functions.GetFieldValues("SELECT Tennxb FROM tblNxb WHERE Manxb = N'" + manxb + "'");
@@ -144,14 +153,6 @@ MessageBoxIcon.Warning);
                 MessageBox.Show("Bạn phải nhập tên sách", "Thông báo", MessageBoxButtons.OK,
  MessageBoxIcon.Warning);
                 txtTensach.Focus();
-                return;
-            }
-
-            if (txtGiaban.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải nhập giá bán", "Thông báo", MessageBoxButtons.OK,
- MessageBoxIcon.Warning);
-                txtGiaban.Focus();
                 return;
             }
 
@@ -203,7 +204,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             sql = "INSERT INTO tblSach(Masach,Tensach,Maloai, Matacgia, Manxb, Soluong, Gianhap, Giaban, Anh, Sotrang) VALUES(N'" + txtMasach.Text.Trim() +
-"',N'" + txtTensach.Text.Trim() + "',N'" + cboMaloai.SelectedValue.ToString() + "',N'" + cboMatacgia.SelectedValue.ToString()  + "',N'" + cboManxb.SelectedValue.ToString() + "','" + txtSoluong.Text.Trim() + "','" + txtGianhap.Text.Trim() + "','" + txtGiaban.Text.Trim() + "','" + txtAnh.Text + "','" + txtSotrang.Text.Trim() + "')";
+"',N'" + txtTensach.Text.Trim() + "',N'" + cboMaloai.SelectedValue.ToString() + "',N'" + cboMatacgia.SelectedValue.ToString()  + "',N'" + cboManxb.SelectedValue.ToString() + "','" + txtSoluong.Text.Trim() + "','" + txtGianhap.Text.Trim() + "','"  + txtGiaban.Text.Trim() + "','" + txtAnh.Text + "','" + txtSotrang.Text.Trim() + "')";
             Functions.RunSql(sql);
             load_datagrid();
             ResetValues();
@@ -269,7 +270,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            sql = "UPDATE tblSach SET Tensach=N'" + txtTensach.Text.ToString() + "', Maloai = N'" + cboMaloai.SelectedValue.ToString() + "', Matacgia = N'" + cboMatacgia.SelectedValue.ToString() + "', Manxb = N'" + cboManxb.SelectedValue.ToString() + "', Sotrang = '" + txtSotrang.Text.Trim() +
+            sql = "UPDATE tblSach SET Tensach=N'" + txtTensach.Text.ToString() + "', Maloai = N'" + cboMaloai.SelectedValue.ToString() + "', Matacgia = N'" + cboMatacgia.SelectedValue.ToString() + "', Manxb = N'" + cboManxb.SelectedValue.ToString() + "', Sotrang = '" + txtSotrang.Text.Trim() + "',Anh = '" + txtAnh.Text +
 "' WHERE Masach=N'" + txtMasach.Text + "'";
             Class.Functions.RunSql(sql);
             load_datagrid();
@@ -315,6 +316,7 @@ MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
 
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
+            txtMasach.Enabled = true;
             string sql;
             if ((txtMasach.Text == "") && (txtTensach.Text == "") && (cboMaloai.Text =="") && (cboManxb.Text =="") && (cboMatacgia.Text == "") && (txtSotrang.Text == "") && (txtGiaban.Text == "") && (txtGianhap.Text == ""))
             {
