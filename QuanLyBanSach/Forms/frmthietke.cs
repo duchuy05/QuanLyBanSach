@@ -1,4 +1,4 @@
-﻿using DevExpress.Internal.WinApi.Windows.UI.Notifications;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -120,7 +120,9 @@ namespace QuanLyBanSach.Forms
 
         private void btnHDnhap_Click(object sender, EventArgs e)
         {
+            lbl_val.Text = "Quản lý Hóa đơn nhập";
 
+            container(new frmHoadonnhap());
         }
 
         private void btnNhanvien_Click(object sender, EventArgs e)
@@ -139,6 +141,13 @@ namespace QuanLyBanSach.Forms
             lbl_val.Text = btnTaikhoan.Text;
 
             container(new frmTaikhoan());
+        }
+
+        private void btnHDxuat_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = "Quản lý hóa đơn xuất";
+
+            container(new frmHoadonban());
         }
     }
 }
