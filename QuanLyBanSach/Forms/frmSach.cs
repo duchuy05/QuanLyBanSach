@@ -73,7 +73,7 @@ namespace QuanLyBanSach.Forms
             cboManxb.SelectedIndex = -1;
             txtSoluong.Text = "0";
             txtGianhap.Text = "0";
-            txtGiaban.Text = "";  
+            txtGiaban.Enabled = false;  
             txtSoluong.Enabled = false;
             txtGianhap.Enabled = false;
             txtSotrang.Text = "";
@@ -106,8 +106,17 @@ MessageBoxIcon.Information);
             maloai = datagridviewSach.CurrentRow.Cells["Maloai"].Value.ToString();
             matacgia = datagridviewSach.CurrentRow.Cells["Matacgia"].Value.ToString();
             manxb = datagridviewSach.CurrentRow.Cells["Manxb"].Value.ToString();
-            //txtAnh.Text = Functions.GetFieldValues("SELECT Anh FROM tblSach WHERE Masach = N'" + txtMasach.Text + "'");
-            //picAnh.Image = Image.FromFile(txtAnh.Text);
+            txtAnh.Text = Functions.GetFieldValues("SELECT Anh FROM tblSach WHERE Masach = N'" + txtMasach.Text + "'");
+            if (!string.IsNullOrWhiteSpace(txtAnh.Text))
+            {
+                // Load the image if the file exists
+                picAnh.Image = Image.FromFile(txtAnh.Text);
+            }
+            else
+            {
+                // Clear the image if the file does not exist or the path is empty
+                picAnh.Image = null;
+            }
             cboMaloai.Text = Class.Functions.GetFieldValues("SELECT Tenloai FROM tblLoaisach WHERE Maloai = N'" + maloai + "'");
             cboMatacgia.Text = Class.Functions.GetFieldValues("SELECT Tentacgia FROM tblTacgia WHERE Matacgia = N'" + matacgia + "'");
             cboManxb.Text = Class.Functions.GetFieldValues("SELECT Tennxb FROM tblNxb WHERE Manxb = N'" + manxb + "'");
@@ -144,14 +153,6 @@ MessageBoxIcon.Warning);
                 MessageBox.Show("Bạn phải nhập tên sách", "Thông báo", MessageBoxButtons.OK,
  MessageBoxIcon.Warning);
                 txtTensach.Focus();
-                return;
-            }
-
-            if (txtGiaban.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải nhập giá bán", "Thông báo", MessageBoxButtons.OK,
- MessageBoxIcon.Warning);
-                txtGiaban.Focus();
                 return;
             }
 
@@ -203,7 +204,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             sql = "INSERT INTO tblSach(Masach,Tensach,Maloai, Matacgia, Manxb, Soluong, Gianhap, Giaban, Anh, Sotrang) VALUES(N'" + txtMasach.Text.Trim() +
-"',N'" + txtTensach.Text.Trim() + "',N'" + cboMaloai.SelectedValue.ToString() + "',N'" + cboMatacgia.SelectedValue.ToString()  + "',N'" + cboManxb.SelectedValue.ToString() + "','" + txtSoluong.Text.Trim() + "','" + txtGianhap.Text.Trim() + "','" + txtGiaban.Text.Trim() + "','" + txtAnh.Text + "','" + txtSotrang.Text.Trim() + "')";
+"',N'" + txtTensach.Text.Trim() + "',N'" + cboMaloai.SelectedValue.ToString() + "',N'" + cboMatacgia.SelectedValue.ToString()  + "',N'" + cboManxb.SelectedValue.ToString() + "','" + txtSoluong.Text.Trim() + "','" + txtGianhap.Text.Trim() + "','"  + txtGiaban.Text.Trim() + "','" + txtAnh.Text + "','" + txtSotrang.Text.Trim() + "')";
             Functions.RunSql(sql);
             load_datagrid();
             ResetValues();
@@ -232,14 +233,14 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             if (txtTensach.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập tên hàng", "Thông báo",
+                MessageBox.Show("Bạn phải nhập tên sách", "Thông báo",
 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtTensach.Focus();
                 return;
             }
             if (txtSotrang.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập thời gian bảo hành", "Thông báo",
+                MessageBox.Show("Bạn phải nhập số trang", "Thông báo",
 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtSotrang.Focus();
                 return;
@@ -247,22 +248,30 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             if (cboMaloai.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập mã màu", "Thông báo",
+                MessageBox.Show("Bạn phải nhập loại sách", "Thông báo",
 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cboMaloai.Focus();
                 return;
             }
 
-            if (txtSotrang.Text.Trim().Length == 0)
+            if (cboManxb.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập thời gian bảo hành", "Thông báo", MessageBoxButtons.OK,
+                MessageBox.Show("Bạn phải nhập nhà xuất bản", "Thông báo", MessageBoxButtons.OK,
  MessageBoxIcon.Warning);
-                txtSotrang.Focus();
+                cboManxb.Focus();
                 return;
             }
 
-            sql = "UPDATE tblHanghoa SET Tenhang=N'" + txtTensach.Text.ToString() + "', Maloai = N'" + cboMaloai.SelectedValue.ToString() + "', Soluong = '" + txtSoluong.Text.Trim() + "', Thoigianbaohanh = '" + txtSotrang.Text.Trim() +
-"' WHERE Mahang=N'" + txtMasach.Text + "'";
+            if (cboMatacgia.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập tác giả", "Thông báo", MessageBoxButtons.OK,
+ MessageBoxIcon.Warning);
+                cboMatacgia.Focus();
+                return;
+            }
+
+            sql = "UPDATE tblSach SET Tensach=N'" + txtTensach.Text.ToString() + "', Maloai = N'" + cboMaloai.SelectedValue.ToString() + "', Matacgia = N'" + cboMatacgia.SelectedValue.ToString() + "', Manxb = N'" + cboManxb.SelectedValue.ToString() + "', Sotrang = '" + txtSotrang.Text.Trim() + "',Anh = '" + txtAnh.Text +
+"' WHERE Masach=N'" + txtMasach.Text + "'";
             Class.Functions.RunSql(sql);
             load_datagrid();
             ResetValues();
@@ -298,7 +307,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (MessageBox.Show("Bạn có muốn xóa không?", "Thông báo",
 MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                sql = "DELETE tblHanghoa WHERE Mahang=N'" + txtMasach.Text + "'";
+                sql = "DELETE tblSach WHERE Masach=N'" + txtMasach.Text + "'";
                 Functions.RunSqlDel(sql);
                 load_datagrid();
                 ResetValues();
@@ -307,21 +316,31 @@ MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
 
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
+            txtMasach.Enabled = true;
             string sql;
-            if ((txtMasach.Text == "") && (txtTensach.Text == "") && (cboMaloai.Text ==
-""))
+            if ((txtMasach.Text == "") && (txtTensach.Text == "") && (cboMaloai.Text =="") && (cboManxb.Text =="") && (cboMatacgia.Text == "") && (txtSotrang.Text == "") && (txtGiaban.Text == "") && (txtGianhap.Text == ""))
             {
                 MessageBox.Show("Hãy nhập một điều kiện tìm kiếm!!!", "Yêu cầu ...",
 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            sql = "SELECT * FROM tblHanghoa WHERE 1=1";
+            sql = "SELECT * FROM tblSach WHERE 1=1";
             if (txtMasach.Text != "")
-                sql = sql + " AND Mahang Like N'%" + txtMasach.Text + "%'";
+                sql = sql + " AND Masach Like N'%" + txtMasach.Text + "%'";
             if (txtTensach.Text != "")
-                sql = sql + " AND Tenhang Like N'%" + txtTensach.Text + "%'";
+                sql = sql + " AND Tensach Like N'%" + txtTensach.Text + "%'";
             if (cboMaloai.Text != "")
                 sql = sql + " AND Maloai Like N'%" + cboMaloai.SelectedValue + "%'";
+            if (cboManxb.Text != "")
+                sql = sql + " AND Manxb Like N'%" + cboManxb.SelectedValue + "%'";
+            if (cboMatacgia.Text != "")
+                sql = sql + " AND Matacgia Like N'%" + cboMatacgia.SelectedValue + "%'";
+            if (txtSotrang.Text != "")
+                sql = sql + " AND Sotrang Like N'%" + txtSotrang.Text + "%'";
+            if (txtGiaban.Text != "")
+                sql = sql + " AND Giaban Like N'%" + txtGiaban.Text + "%'";
+            if (txtGianhap.Text != "")
+                sql = sql + " AND Gianhap Like N'%" + txtGianhap.Text + "%'";
             tblSach = Functions.GetDataToTable(sql);
             if (tblSach.Rows.Count == 0)
                 MessageBox.Show("Không có bản ghi thỏa mãn điều kiện!!!", "Thông báo",
