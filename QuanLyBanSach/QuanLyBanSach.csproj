@@ -110,6 +110,12 @@
       <DependentUpon>frmthietke.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Functions.cs" />
+    <Compile Include="frmLoaisach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoaisach.Designer.cs">
+      <DependentUpon>frmLoaisach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Programs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmDangnhap.resx">
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmthietke.resx">
       <DependentUpon>frmthietke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoaisach.resx">
+      <DependentUpon>frmLoaisach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
