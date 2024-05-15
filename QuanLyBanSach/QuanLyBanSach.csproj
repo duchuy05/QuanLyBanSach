@@ -79,7 +79,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Functions.cs" />
     <Compile Include="Forms\frmDangnhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,7 +103,8 @@
     <Compile Include="Forms\frmthietke.Designer.cs">
       <DependentUpon>frmthietke.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Class\Functions.cs" />
+    <Compile Include="Programs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmDangnhap.resx">
       <DependentUpon>frmDangnhap.cs</DependentUpon>
