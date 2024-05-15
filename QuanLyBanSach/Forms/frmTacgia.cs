@@ -41,5 +41,10 @@ namespace QuanLyBanSach.Forms
             datagridviewTacgia.AllowUserToAddRows = false;
             datagridviewTacgia.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
+
+        private void txtMatacgia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

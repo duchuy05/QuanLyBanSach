@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmthietke));
             this.panelLeft = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnHDxuat = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBaocao = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTaikhoan = new Guna.UI2.WinForms.Guna2Button();
             this.btnKm = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHDnhap = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHDxuat = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnKhach = new Guna.UI2.WinForms.Guna2Button();
             this.btnNhanvien = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBaocao = new Guna.UI2.WinForms.Guna2Button();
-            this.btnTaikhoan = new Guna.UI2.WinForms.Guna2Button();
-            this.btnHDnhap = new Guna.UI2.WinForms.Guna2Button();
             this.btnNxb = new Guna.UI2.WinForms.Guna2Button();
             this.btnLoaisach = new Guna.UI2.WinForms.Guna2Button();
             this.btnSach = new Guna.UI2.WinForms.Guna2Button();
@@ -69,105 +69,10 @@
             this.panelLeft.Controls.Add(this.guna2PictureBox1);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelLeft.Margin = new System.Windows.Forms.Padding(2);
+            this.panelLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(223, 641);
+            this.panelLeft.Size = new System.Drawing.Size(297, 789);
             this.panelLeft.TabIndex = 0;
-            // 
-            // btnHDxuat
-            // 
-            this.btnHDxuat.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnHDxuat.BorderColor = System.Drawing.Color.PowderBlue;
-            this.btnHDxuat.BorderThickness = 2;
-            this.btnHDxuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHDxuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHDxuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHDxuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHDxuat.FillColor = System.Drawing.Color.LightSteelBlue;
-            this.btnHDxuat.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHDxuat.ForeColor = System.Drawing.Color.Black;
-            this.btnHDxuat.Location = new System.Drawing.Point(-6, 297);
-            this.btnHDxuat.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHDxuat.Name = "btnHDxuat";
-            this.btnHDxuat.Size = new System.Drawing.Size(234, 42);
-            this.btnHDxuat.TabIndex = 5;
-            this.btnHDxuat.Text = "Quản lý hóa đơn xuất";
-            // 
-            // btnKm
-            // 
-            this.btnKm.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnKm.BorderColor = System.Drawing.Color.PowderBlue;
-            this.btnKm.BorderThickness = 2;
-            this.btnKm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKm.FillColor = System.Drawing.Color.LightSteelBlue;
-            this.btnKm.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKm.ForeColor = System.Drawing.Color.Black;
-            this.btnKm.Location = new System.Drawing.Point(-6, 435);
-            this.btnKm.Margin = new System.Windows.Forms.Padding(2);
-            this.btnKm.Name = "btnKm";
-            this.btnKm.Size = new System.Drawing.Size(234, 42);
-            this.btnKm.TabIndex = 12;
-            this.btnKm.Text = "Quản lý khuyến mãi";
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.FillColor = System.Drawing.Color.MintCream;
-            this.btnLogout.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.Black;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(70, 585);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnLogout.Size = new System.Drawing.Size(89, 44);
-            this.btnLogout.TabIndex = 11;
-            this.btnLogout.Text = "Đăng xuất";
-            this.btnLogout.Click += new System.EventHandler(this.guna2CircleButton1_Click);
-            // 
-            // btnKhach
-            // 
-            this.btnKhach.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnKhach.BorderColor = System.Drawing.Color.PowderBlue;
-            this.btnKhach.BorderThickness = 2;
-            this.btnKhach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKhach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKhach.FillColor = System.Drawing.Color.LightSteelBlue;
-            this.btnKhach.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhach.ForeColor = System.Drawing.Color.Black;
-            this.btnKhach.Location = new System.Drawing.Point(-5, 389);
-            this.btnKhach.Margin = new System.Windows.Forms.Padding(2);
-            this.btnKhach.Name = "btnKhach";
-            this.btnKhach.Size = new System.Drawing.Size(233, 42);
-            this.btnKhach.TabIndex = 9;
-            this.btnKhach.Text = "Quản lý khách hàng";
-            // 
-            // btnNhanvien
-            // 
-            this.btnNhanvien.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnNhanvien.BorderColor = System.Drawing.Color.PowderBlue;
-            this.btnNhanvien.BorderThickness = 2;
-            this.btnNhanvien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhanvien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhanvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNhanvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNhanvien.FillColor = System.Drawing.Color.LightSteelBlue;
-            this.btnNhanvien.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanvien.ForeColor = System.Drawing.Color.Black;
-            this.btnNhanvien.Location = new System.Drawing.Point(-7, 343);
-            this.btnNhanvien.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNhanvien.Name = "btnNhanvien";
-            this.btnNhanvien.Size = new System.Drawing.Size(239, 42);
-            this.btnNhanvien.TabIndex = 8;
-            this.btnNhanvien.Text = "Quản lý nhân viên";
-            this.btnNhanvien.Click += new System.EventHandler(this.btnNhanvien_Click);
             // 
             // btnBaocao
             // 
@@ -184,10 +89,10 @@
             this.btnBaocao.Image = ((System.Drawing.Image)(resources.GetObject("btnBaocao.Image")));
             this.btnBaocao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnBaocao.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnBaocao.Location = new System.Drawing.Point(-2, 527);
-            this.btnBaocao.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBaocao.Location = new System.Drawing.Point(-3, 649);
+            this.btnBaocao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBaocao.Name = "btnBaocao";
-            this.btnBaocao.Size = new System.Drawing.Size(234, 42);
+            this.btnBaocao.Size = new System.Drawing.Size(312, 52);
             this.btnBaocao.TabIndex = 7;
             this.btnBaocao.Text = "Báo cáo thống kê";
             // 
@@ -203,12 +108,31 @@
             this.btnTaikhoan.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnTaikhoan.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaikhoan.ForeColor = System.Drawing.Color.Black;
-            this.btnTaikhoan.Location = new System.Drawing.Point(-7, 481);
-            this.btnTaikhoan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTaikhoan.Location = new System.Drawing.Point(-9, 592);
+            this.btnTaikhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTaikhoan.Name = "btnTaikhoan";
-            this.btnTaikhoan.Size = new System.Drawing.Size(235, 42);
+            this.btnTaikhoan.Size = new System.Drawing.Size(313, 52);
             this.btnTaikhoan.TabIndex = 6;
             this.btnTaikhoan.Text = "Quản lý tài khoản";
+            // 
+            // btnKm
+            // 
+            this.btnKm.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnKm.BorderColor = System.Drawing.Color.PowderBlue;
+            this.btnKm.BorderThickness = 2;
+            this.btnKm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKm.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.btnKm.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKm.ForeColor = System.Drawing.Color.Black;
+            this.btnKm.Location = new System.Drawing.Point(-8, 535);
+            this.btnKm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnKm.Name = "btnKm";
+            this.btnKm.Size = new System.Drawing.Size(312, 52);
+            this.btnKm.TabIndex = 12;
+            this.btnKm.Text = "Quản lý khuyến mãi";
             // 
             // btnHDnhap
             // 
@@ -222,13 +146,91 @@
             this.btnHDnhap.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnHDnhap.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHDnhap.ForeColor = System.Drawing.Color.Black;
-            this.btnHDnhap.Location = new System.Drawing.Point(-5, 251);
-            this.btnHDnhap.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHDnhap.Location = new System.Drawing.Point(-7, 309);
+            this.btnHDnhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHDnhap.Name = "btnHDnhap";
-            this.btnHDnhap.Size = new System.Drawing.Size(233, 42);
+            this.btnHDnhap.Size = new System.Drawing.Size(311, 52);
             this.btnHDnhap.TabIndex = 4;
             this.btnHDnhap.Text = "Quản lý hóa đơn nhập";
             this.btnHDnhap.Click += new System.EventHandler(this.btnHDnhap_Click);
+            // 
+            // btnHDxuat
+            // 
+            this.btnHDxuat.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnHDxuat.BorderColor = System.Drawing.Color.PowderBlue;
+            this.btnHDxuat.BorderThickness = 2;
+            this.btnHDxuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHDxuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHDxuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHDxuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHDxuat.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.btnHDxuat.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHDxuat.ForeColor = System.Drawing.Color.Black;
+            this.btnHDxuat.Location = new System.Drawing.Point(-8, 366);
+            this.btnHDxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHDxuat.Name = "btnHDxuat";
+            this.btnHDxuat.Size = new System.Drawing.Size(312, 52);
+            this.btnHDxuat.TabIndex = 5;
+            this.btnHDxuat.Text = "Quản lý hóa đơn xuất";
+            this.btnHDxuat.Click += new System.EventHandler(this.btnHDxuat_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.FillColor = System.Drawing.Color.MintCream;
+            this.btnLogout.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.Black;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(93, 720);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnLogout.Size = new System.Drawing.Size(119, 54);
+            this.btnLogout.TabIndex = 11;
+            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.Click += new System.EventHandler(this.guna2CircleButton1_Click);
+            // 
+            // btnKhach
+            // 
+            this.btnKhach.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnKhach.BorderColor = System.Drawing.Color.PowderBlue;
+            this.btnKhach.BorderThickness = 2;
+            this.btnKhach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKhach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKhach.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.btnKhach.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhach.ForeColor = System.Drawing.Color.Black;
+            this.btnKhach.Location = new System.Drawing.Point(-7, 479);
+            this.btnKhach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnKhach.Name = "btnKhach";
+            this.btnKhach.Size = new System.Drawing.Size(311, 52);
+            this.btnKhach.TabIndex = 9;
+            this.btnKhach.Text = "Quản lý khách hàng";
+            // 
+            // btnNhanvien
+            // 
+            this.btnNhanvien.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnNhanvien.BorderColor = System.Drawing.Color.PowderBlue;
+            this.btnNhanvien.BorderThickness = 2;
+            this.btnNhanvien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhanvien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhanvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNhanvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNhanvien.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.btnNhanvien.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanvien.ForeColor = System.Drawing.Color.Black;
+            this.btnNhanvien.Location = new System.Drawing.Point(-9, 422);
+            this.btnNhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNhanvien.Name = "btnNhanvien";
+            this.btnNhanvien.Size = new System.Drawing.Size(319, 52);
+            this.btnNhanvien.TabIndex = 8;
+            this.btnNhanvien.Text = "Quản lý nhân viên";
+            this.btnNhanvien.Click += new System.EventHandler(this.btnNhanvien_Click);
             // 
             // btnNxb
             // 
@@ -242,12 +244,13 @@
             this.btnNxb.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnNxb.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNxb.ForeColor = System.Drawing.Color.Black;
-            this.btnNxb.Location = new System.Drawing.Point(-7, 205);
-            this.btnNxb.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNxb.Location = new System.Drawing.Point(-9, 252);
+            this.btnNxb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNxb.Name = "btnNxb";
-            this.btnNxb.Size = new System.Drawing.Size(239, 42);
+            this.btnNxb.Size = new System.Drawing.Size(319, 52);
             this.btnNxb.TabIndex = 3;
             this.btnNxb.Text = "Quản lý nhà xuất bản";
+            this.btnNxb.Click += new System.EventHandler(this.btnNxb_Click);
             // 
             // btnLoaisach
             // 
@@ -261,10 +264,10 @@
             this.btnLoaisach.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnLoaisach.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoaisach.ForeColor = System.Drawing.Color.Black;
-            this.btnLoaisach.Location = new System.Drawing.Point(-7, 113);
-            this.btnLoaisach.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoaisach.Location = new System.Drawing.Point(-9, 139);
+            this.btnLoaisach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoaisach.Name = "btnLoaisach";
-            this.btnLoaisach.Size = new System.Drawing.Size(239, 42);
+            this.btnLoaisach.Size = new System.Drawing.Size(319, 52);
             this.btnLoaisach.TabIndex = 2;
             this.btnLoaisach.Text = "Quản lý loại sách";
             this.btnLoaisach.Click += new System.EventHandler(this.btnLoaisach_Click);
@@ -284,10 +287,10 @@
             this.btnSach.Image = ((System.Drawing.Image)(resources.GetObject("btnSach.Image")));
             this.btnSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnSach.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSach.Location = new System.Drawing.Point(-7, 66);
-            this.btnSach.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSach.Location = new System.Drawing.Point(-9, 81);
+            this.btnSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSach.Name = "btnSach";
-            this.btnSach.Size = new System.Drawing.Size(239, 43);
+            this.btnSach.Size = new System.Drawing.Size(319, 53);
             this.btnSach.TabIndex = 0;
             this.btnSach.Text = "Quản lý sách";
             this.btnSach.BackColorChanged += new System.EventHandler(this.btnSach_BackColorChanged);
@@ -305,10 +308,10 @@
             this.btnTacgia.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnTacgia.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTacgia.ForeColor = System.Drawing.Color.Black;
-            this.btnTacgia.Location = new System.Drawing.Point(-5, 159);
-            this.btnTacgia.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTacgia.Location = new System.Drawing.Point(-7, 196);
+            this.btnTacgia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTacgia.Name = "btnTacgia";
-            this.btnTacgia.Size = new System.Drawing.Size(237, 42);
+            this.btnTacgia.Size = new System.Drawing.Size(316, 52);
             this.btnTacgia.TabIndex = 1;
             this.btnTacgia.Text = "Quản lý tác giả";
             this.btnTacgia.Click += new System.EventHandler(this.btnTacgia_Click);
@@ -318,9 +321,10 @@
             this.guna2PictureBox1.ErrorImage = null;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-30, -49);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-40, -60);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(301, 158);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(401, 194);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
@@ -329,10 +333,10 @@
             // panelContent
             // 
             this.panelContent.BackColor = System.Drawing.Color.AliceBlue;
-            this.panelContent.Location = new System.Drawing.Point(223, 38);
-            this.panelContent.Margin = new System.Windows.Forms.Padding(2);
+            this.panelContent.Location = new System.Drawing.Point(297, 47);
+            this.panelContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(961, 603);
+            this.panelContent.Size = new System.Drawing.Size(1279, 742);
             this.panelContent.TabIndex = 0;
             this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContent_Paint);
             // 
@@ -341,9 +345,10 @@
             this.panelTop.BackColor = System.Drawing.Color.Navy;
             this.panelTop.Controls.Add(this.lbl_val);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(223, 0);
+            this.panelTop.Location = new System.Drawing.Point(297, 0);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(4);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(961, 39);
+            this.panelTop.Size = new System.Drawing.Size(1282, 48);
             this.panelTop.TabIndex = 1;
             this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -352,21 +357,22 @@
             this.lbl_val.BackColor = System.Drawing.Color.Transparent;
             this.lbl_val.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbl_val.ForeColor = System.Drawing.Color.White;
-            this.lbl_val.Location = new System.Drawing.Point(416, 6);
+            this.lbl_val.Location = new System.Drawing.Point(555, 7);
+            this.lbl_val.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_val.Name = "lbl_val";
-            this.lbl_val.Size = new System.Drawing.Size(102, 27);
+            this.lbl_val.Size = new System.Drawing.Size(126, 33);
             this.lbl_val.TabIndex = 1;
             this.lbl_val.Text = "Trang chủ";
             // 
             // frmthietke
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 641);
+            this.ClientSize = new System.Drawing.Size(1579, 789);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelLeft);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmthietke";
             this.Text = "Quản lý bán Sách";
             this.panelLeft.ResumeLayout(false);
