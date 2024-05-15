@@ -91,7 +91,7 @@
             this.datagridviewSach.Location = new System.Drawing.Point(0, 315);
             this.datagridviewSach.Name = "datagridviewSach";
             this.datagridviewSach.RowHeadersVisible = false;
-            this.datagridviewSach.RowHeadersWidth = 51;
+            this.datagridviewSach.RowHeadersWidth = 82;
             this.datagridviewSach.Size = new System.Drawing.Size(961, 230);
             this.datagridviewSach.TabIndex = 0;
             this.datagridviewSach.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -209,7 +209,7 @@
             this.lblMasach.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMasach.Location = new System.Drawing.Point(109, 16);
             this.lblMasach.Name = "lblMasach";
-            this.lblMasach.Size = new System.Drawing.Size(76, 25);
+            this.lblMasach.Size = new System.Drawing.Size(64, 21);
             this.lblMasach.TabIndex = 7;
             this.lblMasach.Text = "Mã sách";
             // 
@@ -219,7 +219,7 @@
             this.lblSoluong.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoluong.Location = new System.Drawing.Point(449, 16);
             this.lblSoluong.Name = "lblSoluong";
-            this.lblSoluong.Size = new System.Drawing.Size(84, 25);
+            this.lblSoluong.Size = new System.Drawing.Size(69, 21);
             this.lblSoluong.TabIndex = 9;
             this.lblSoluong.Text = "Số lượng";
             // 
@@ -229,7 +229,7 @@
             this.lblTensach.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTensach.Location = new System.Drawing.Point(109, 72);
             this.lblTensach.Name = "lblTensach";
-            this.lblTensach.Size = new System.Drawing.Size(84, 25);
+            this.lblTensach.Size = new System.Drawing.Size(69, 21);
             this.lblTensach.TabIndex = 11;
             this.lblTensach.Text = "Tên sách";
             // 
@@ -245,7 +245,6 @@
             this.txtMasach.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMasach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMasach.Location = new System.Drawing.Point(221, 16);
-            this.txtMasach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMasach.Name = "txtMasach";
             this.txtMasach.PasswordChar = '\0';
             this.txtMasach.PlaceholderText = "";
@@ -265,7 +264,6 @@
             this.txtSoluong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSoluong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoluong.Location = new System.Drawing.Point(604, 16);
-            this.txtSoluong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSoluong.Name = "txtSoluong";
             this.txtSoluong.PasswordChar = '\0';
             this.txtSoluong.PlaceholderText = "";
@@ -285,7 +283,6 @@
             this.txtTensach.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTensach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTensach.Location = new System.Drawing.Point(221, 72);
-            this.txtTensach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTensach.Name = "txtTensach";
             this.txtTensach.PasswordChar = '\0';
             this.txtTensach.PlaceholderText = "";
@@ -316,7 +313,7 @@
             this.lblGianhap.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGianhap.Location = new System.Drawing.Point(109, 134);
             this.lblGianhap.Name = "lblGianhap";
-            this.lblGianhap.Size = new System.Drawing.Size(84, 25);
+            this.lblGianhap.Size = new System.Drawing.Size(70, 21);
             this.lblGianhap.TabIndex = 18;
             this.lblGianhap.Text = "Giá nhập";
             // 
@@ -332,7 +329,6 @@
             this.txtGianhap.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtGianhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGianhap.Location = new System.Drawing.Point(221, 134);
-            this.txtGianhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGianhap.Name = "txtGianhap";
             this.txtGianhap.PasswordChar = '\0';
             this.txtGianhap.PlaceholderText = "";
@@ -346,7 +342,7 @@
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(109, 203);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(72, 25);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(59, 21);
             this.guna2HtmlLabel1.TabIndex = 20;
             this.guna2HtmlLabel1.Text = "Giá bán";
             // 
@@ -362,7 +358,6 @@
             this.txtGiaban.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtGiaban.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGiaban.Location = new System.Drawing.Point(221, 203);
-            this.txtGiaban.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGiaban.Name = "txtGiaban";
             this.txtGiaban.PasswordChar = '\0';
             this.txtGiaban.PlaceholderText = "";
@@ -376,7 +371,7 @@
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(449, 72);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(69, 25);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(58, 21);
             this.guna2HtmlLabel2.TabIndex = 22;
             this.guna2HtmlLabel2.Text = "Mã loại";
             // 
@@ -386,7 +381,7 @@
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(449, 134);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(93, 25);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(79, 21);
             this.guna2HtmlLabel3.TabIndex = 23;
             this.guna2HtmlLabel3.Text = "Mã tác giả";
             // 
@@ -396,7 +391,7 @@
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(449, 203);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(154, 25);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(128, 21);
             this.guna2HtmlLabel4.TabIndex = 24;
             this.guna2HtmlLabel4.Text = "Mã nhà xuất bản";
             // 
@@ -406,7 +401,7 @@
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(109, 265);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(77, 25);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(64, 21);
             this.guna2HtmlLabel5.TabIndex = 25;
             this.guna2HtmlLabel5.Text = "Số trang";
             // 
@@ -422,7 +417,6 @@
             this.txtSotrang.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSotrang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSotrang.Location = new System.Drawing.Point(221, 265);
-            this.txtSotrang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSotrang.Name = "txtSotrang";
             this.txtSotrang.PasswordChar = '\0';
             this.txtSotrang.PlaceholderText = "";
@@ -436,7 +430,7 @@
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(449, 265);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(40, 25);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(33, 21);
             this.guna2HtmlLabel6.TabIndex = 27;
             this.guna2HtmlLabel6.Text = "Ảnh";
             // 
@@ -522,7 +516,6 @@
             this.txtAnh.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAnh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAnh.Location = new System.Drawing.Point(604, 255);
-            this.txtAnh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAnh.Name = "txtAnh";
             this.txtAnh.PasswordChar = '\0';
             this.txtAnh.PlaceholderText = "";
@@ -532,7 +525,7 @@
             // 
             // frmSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(961, 603);
             this.Controls.Add(this.txtAnh);
