@@ -25,7 +25,7 @@ namespace QuanLyBanSach.Forms
             sqlcmd.CommandType = CommandType.Text;
             sqlcmd.CommandText = "SELECT * from tblTaikhoan where tentaikhoan = '" + txtTaikhoan.Text + "' AND matkhau = '" + txtMatkhau.Text + "'";
 
-            sqlcmd.Connection = Functions.conn;
+            sqlcmd.Connection = Class.Functions.conn;
 
             SqlDataReader data = sqlcmd.ExecuteReader();
 

@@ -145,6 +145,11 @@ namespace QuanLyBanSach.Forms
 
         private void btnHDxuat_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnHDxuat_Click_1(object sender, EventArgs e)
+        {
             lbl_val.Text = "Quản lý hóa đơn xuất";
 
             container(new frmHoadonban());

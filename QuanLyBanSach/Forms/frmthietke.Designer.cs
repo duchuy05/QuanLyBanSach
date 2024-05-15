@@ -71,8 +71,9 @@ namespace QuanLyBanSach.Forms
             this.panelLeft.Controls.Add(this.guna2PictureBox1);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(583, 1233);
+            this.panelLeft.Size = new System.Drawing.Size(389, 675);
             this.panelLeft.TabIndex = 0;
             // 
             // btnBaocao
@@ -90,9 +91,10 @@ namespace QuanLyBanSach.Forms
             this.btnBaocao.Image = ((System.Drawing.Image)(resources.GetObject("btnBaocao.Image")));
             this.btnBaocao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnBaocao.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnBaocao.Location = new System.Drawing.Point(-3, 648);
+            this.btnBaocao.Location = new System.Drawing.Point(-2, 415);
+            this.btnBaocao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBaocao.Name = "btnBaocao";
-            this.btnBaocao.Size = new System.Drawing.Size(312, 52);
+            this.btnBaocao.Size = new System.Drawing.Size(208, 33);
             this.btnBaocao.TabIndex = 7;
             this.btnBaocao.Text = "Báo cáo thống kê";
             // 
@@ -108,10 +110,9 @@ namespace QuanLyBanSach.Forms
             this.btnTaikhoan.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnTaikhoan.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaikhoan.ForeColor = System.Drawing.Color.Black;
-            this.btnTaikhoan.Location = new System.Drawing.Point(-14, 925);
-            this.btnTaikhoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTaikhoan.Location = new System.Drawing.Point(-9, 592);
             this.btnTaikhoan.Name = "btnTaikhoan";
-            this.btnTaikhoan.Size = new System.Drawing.Size(470, 81);
+            this.btnTaikhoan.Size = new System.Drawing.Size(313, 52);
             this.btnTaikhoan.TabIndex = 6;
             this.btnTaikhoan.Text = "Quản lý tài khoản";
             this.btnTaikhoan.Click += new System.EventHandler(this.btnTaikhoan_Click);
@@ -128,10 +129,9 @@ namespace QuanLyBanSach.Forms
             this.btnKm.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnKm.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKm.ForeColor = System.Drawing.Color.Black;
-            this.btnKm.Location = new System.Drawing.Point(-12, 837);
-            this.btnKm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKm.Location = new System.Drawing.Point(-8, 536);
             this.btnKm.Name = "btnKm";
-            this.btnKm.Size = new System.Drawing.Size(468, 81);
+            this.btnKm.Size = new System.Drawing.Size(312, 52);
             this.btnKm.TabIndex = 12;
             this.btnKm.Text = "Quản lý khuyến mãi";
             // 
@@ -147,10 +147,9 @@ namespace QuanLyBanSach.Forms
             this.btnHDnhap.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnHDnhap.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHDnhap.ForeColor = System.Drawing.Color.Black;
-            this.btnHDnhap.Location = new System.Drawing.Point(-10, 483);
-            this.btnHDnhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHDnhap.Location = new System.Drawing.Point(-7, 309);
             this.btnHDnhap.Name = "btnHDnhap";
-            this.btnHDnhap.Size = new System.Drawing.Size(466, 81);
+            this.btnHDnhap.Size = new System.Drawing.Size(311, 52);
             this.btnHDnhap.TabIndex = 4;
             this.btnHDnhap.Text = "Quản lý hóa đơn nhập";
             this.btnHDnhap.Click += new System.EventHandler(this.btnHDnhap_Click);
@@ -167,12 +166,12 @@ namespace QuanLyBanSach.Forms
             this.btnHDxuat.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnHDxuat.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHDxuat.ForeColor = System.Drawing.Color.Black;
-            this.btnHDxuat.Location = new System.Drawing.Point(-12, 571);
-            this.btnHDxuat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHDxuat.Location = new System.Drawing.Point(-8, 365);
             this.btnHDxuat.Name = "btnHDxuat";
-            this.btnHDxuat.Size = new System.Drawing.Size(468, 81);
+            this.btnHDxuat.Size = new System.Drawing.Size(312, 52);
             this.btnHDxuat.TabIndex = 5;
             this.btnHDxuat.Text = "Quản lý hóa đơn xuất";
+            this.btnHDxuat.Click += new System.EventHandler(this.btnHDxuat_Click_1);
             // 
             // btnLogout
             // 
@@ -184,11 +183,11 @@ namespace QuanLyBanSach.Forms
             this.btnLogout.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(140, 1125);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnLogout.Location = new System.Drawing.Point(93, 720);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnLogout.Size = new System.Drawing.Size(178, 85);
+            this.btnLogout.Size = new System.Drawing.Size(119, 54);
             this.btnLogout.TabIndex = 11;
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
@@ -205,10 +204,9 @@ namespace QuanLyBanSach.Forms
             this.btnKhach.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnKhach.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhach.ForeColor = System.Drawing.Color.Black;
-            this.btnKhach.Location = new System.Drawing.Point(-10, 748);
-            this.btnKhach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKhach.Location = new System.Drawing.Point(-7, 479);
             this.btnKhach.Name = "btnKhach";
-            this.btnKhach.Size = new System.Drawing.Size(466, 81);
+            this.btnKhach.Size = new System.Drawing.Size(311, 52);
             this.btnKhach.TabIndex = 9;
             this.btnKhach.Text = "Quản lý khách hàng";
             // 
@@ -224,10 +222,9 @@ namespace QuanLyBanSach.Forms
             this.btnNhanvien.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnNhanvien.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanvien.ForeColor = System.Drawing.Color.Black;
-            this.btnNhanvien.Location = new System.Drawing.Point(-14, 660);
-            this.btnNhanvien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNhanvien.Location = new System.Drawing.Point(-9, 422);
             this.btnNhanvien.Name = "btnNhanvien";
-            this.btnNhanvien.Size = new System.Drawing.Size(478, 81);
+            this.btnNhanvien.Size = new System.Drawing.Size(319, 52);
             this.btnNhanvien.TabIndex = 8;
             this.btnNhanvien.Text = "Quản lý nhân viên";
             this.btnNhanvien.Click += new System.EventHandler(this.btnNhanvien_Click);
@@ -244,10 +241,9 @@ namespace QuanLyBanSach.Forms
             this.btnNxb.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnNxb.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNxb.ForeColor = System.Drawing.Color.Black;
-            this.btnNxb.Location = new System.Drawing.Point(-14, 394);
-            this.btnNxb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNxb.Location = new System.Drawing.Point(-9, 252);
             this.btnNxb.Name = "btnNxb";
-            this.btnNxb.Size = new System.Drawing.Size(478, 81);
+            this.btnNxb.Size = new System.Drawing.Size(319, 52);
             this.btnNxb.TabIndex = 3;
             this.btnNxb.Text = "Quản lý nhà xuất bản";
             this.btnNxb.Click += new System.EventHandler(this.btnNxb_Click);
@@ -264,10 +260,9 @@ namespace QuanLyBanSach.Forms
             this.btnLoaisach.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnLoaisach.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoaisach.ForeColor = System.Drawing.Color.Black;
-            this.btnLoaisach.Location = new System.Drawing.Point(-14, 217);
-            this.btnLoaisach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoaisach.Location = new System.Drawing.Point(-9, 139);
             this.btnLoaisach.Name = "btnLoaisach";
-            this.btnLoaisach.Size = new System.Drawing.Size(478, 81);
+            this.btnLoaisach.Size = new System.Drawing.Size(319, 52);
             this.btnLoaisach.TabIndex = 2;
             this.btnLoaisach.Text = "Quản lý loại sách";
             this.btnLoaisach.Click += new System.EventHandler(this.btnLoaisach_Click);
@@ -287,10 +282,9 @@ namespace QuanLyBanSach.Forms
             this.btnSach.Image = ((System.Drawing.Image)(resources.GetObject("btnSach.Image")));
             this.btnSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnSach.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSach.Location = new System.Drawing.Point(-14, 127);
-            this.btnSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSach.Location = new System.Drawing.Point(-9, 81);
             this.btnSach.Name = "btnSach";
-            this.btnSach.Size = new System.Drawing.Size(478, 83);
+            this.btnSach.Size = new System.Drawing.Size(319, 53);
             this.btnSach.TabIndex = 0;
             this.btnSach.Text = "Quản lý sách";
             this.btnSach.BackColorChanged += new System.EventHandler(this.btnSach_BackColorChanged);
@@ -308,10 +302,9 @@ namespace QuanLyBanSach.Forms
             this.btnTacgia.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnTacgia.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTacgia.ForeColor = System.Drawing.Color.Black;
-            this.btnTacgia.Location = new System.Drawing.Point(-10, 306);
-            this.btnTacgia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTacgia.Location = new System.Drawing.Point(-7, 196);
             this.btnTacgia.Name = "btnTacgia";
-            this.btnTacgia.Size = new System.Drawing.Size(474, 81);
+            this.btnTacgia.Size = new System.Drawing.Size(316, 52);
             this.btnTacgia.TabIndex = 1;
             this.btnTacgia.Text = "Quản lý tác giả";
             this.btnTacgia.Click += new System.EventHandler(this.btnTacgia_Click);
@@ -321,10 +314,10 @@ namespace QuanLyBanSach.Forms
             this.guna2PictureBox1.ErrorImage = null;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-60, -94);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-40, -60);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(602, 304);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(401, 195);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
@@ -333,10 +326,9 @@ namespace QuanLyBanSach.Forms
             // panelContent
             // 
             this.panelContent.BackColor = System.Drawing.Color.AliceBlue;
-            this.panelContent.Location = new System.Drawing.Point(446, 73);
-            this.panelContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelContent.Location = new System.Drawing.Point(297, 47);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1922, 1160);
+            this.panelContent.Size = new System.Drawing.Size(1281, 742);
             this.panelContent.TabIndex = 0;
             this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContent_Paint);
             // 
@@ -345,10 +337,10 @@ namespace QuanLyBanSach.Forms
             this.panelTop.BackColor = System.Drawing.Color.Navy;
             this.panelTop.Controls.Add(this.lbl_val);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(583, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelTop.Location = new System.Drawing.Point(389, 0);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1785, 98);
+            this.panelTop.Size = new System.Drawing.Size(894, 63);
             this.panelTop.TabIndex = 1;
             this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -357,22 +349,21 @@ namespace QuanLyBanSach.Forms
             this.lbl_val.BackColor = System.Drawing.Color.Transparent;
             this.lbl_val.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbl_val.ForeColor = System.Drawing.Color.White;
-            this.lbl_val.Location = new System.Drawing.Point(832, 12);
-            this.lbl_val.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lbl_val.Location = new System.Drawing.Point(555, 8);
+            this.lbl_val.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbl_val.Name = "lbl_val";
-            this.lbl_val.Size = new System.Drawing.Size(197, 51);
+            this.lbl_val.Size = new System.Drawing.Size(126, 33);
             this.lbl_val.TabIndex = 1;
             this.lbl_val.Text = "Trang chủ";
             // 
             // frmthietke
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2368, 1233);
+            this.ClientSize = new System.Drawing.Size(1283, 675);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelLeft);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmthietke";
             this.Text = "Quản lý bán Sách";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmthietke_FormClosed);

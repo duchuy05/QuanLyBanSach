@@ -79,6 +79,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Functions.cs" />
     <Compile Include="Forms\frmDangnhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,7 +128,6 @@
     <Compile Include="Forms\frmthietke.Designer.cs">
       <DependentUpon>frmthietke.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\Functions.cs" />
     <Compile Include="Forms\frmLoaisach.cs">
       <SubType>Form</SubType>
     </Compile>
