@@ -367,5 +367,10 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtAnh.Text = dlgOpen.FileName;
             }
         }
+
+        private void datagridviewSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

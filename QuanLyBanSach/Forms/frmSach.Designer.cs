@@ -116,6 +116,7 @@
             this.datagridviewSach.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridviewSach.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.datagridviewSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridviewSach_CellClick);
+            this.datagridviewSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridviewSach_CellContentClick);
             // 
             // btnThem
             // 

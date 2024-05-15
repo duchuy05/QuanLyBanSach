@@ -1,4 +1,6 @@
-﻿namespace QuanLyBanSach.Forms
+﻿using System;
+
+namespace QuanLyBanSach.Forms
 {
     partial class frmthietke
     {
@@ -108,32 +110,13 @@
             this.btnTaikhoan.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnTaikhoan.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaikhoan.ForeColor = System.Drawing.Color.Black;
-            this.btnTaikhoan.Location = new System.Drawing.Point(-7, 481);
-            this.btnTaikhoan.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTaikhoan.Name = "btnTaikhoan";
-            this.btnTaikhoan.Size = new System.Drawing.Size(235, 42);
-            this.btnTaikhoan.TabIndex = 6;
-            this.btnTaikhoan.Text = "Quản lý tài khoản";
-            this.btnTaikhoan.Click += new System.EventHandler(this.btnTaikhoan_Click);
-            // 
-            // btnTaikhoan
-            // 
-            this.btnTaikhoan.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnTaikhoan.BorderColor = System.Drawing.Color.PowderBlue;
-            this.btnTaikhoan.BorderThickness = 2;
-            this.btnTaikhoan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTaikhoan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTaikhoan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTaikhoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTaikhoan.FillColor = System.Drawing.Color.LightSteelBlue;
-            this.btnTaikhoan.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaikhoan.ForeColor = System.Drawing.Color.Black;
             this.btnTaikhoan.Location = new System.Drawing.Point(-9, 592);
             this.btnTaikhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTaikhoan.Name = "btnTaikhoan";
             this.btnTaikhoan.Size = new System.Drawing.Size(313, 52);
             this.btnTaikhoan.TabIndex = 6;
             this.btnTaikhoan.Text = "Quản lý tài khoản";
+            this.btnTaikhoan.Click += new System.EventHandler(this.btnTaikhoan_Click);
             // 
             // btnKm
             // 
@@ -153,6 +136,24 @@
             this.btnKm.Size = new System.Drawing.Size(312, 52);
             this.btnKm.TabIndex = 12;
             this.btnKm.Text = "Quản lý khuyến mãi";
+            // 
+            // btnHDnhap
+            // 
+            this.btnHDnhap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHDnhap.ForeColor = System.Drawing.Color.White;
+            this.btnHDnhap.Location = new System.Drawing.Point(0, 0);
+            this.btnHDnhap.Name = "btnHDnhap";
+            this.btnHDnhap.Size = new System.Drawing.Size(180, 45);
+            this.btnHDnhap.TabIndex = 13;
+            // 
+            // btnHDxuat
+            // 
+            this.btnHDxuat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHDxuat.ForeColor = System.Drawing.Color.White;
+            this.btnHDxuat.Location = new System.Drawing.Point(0, 0);
+            this.btnHDxuat.Name = "btnHDxuat";
+            this.btnHDxuat.Size = new System.Drawing.Size(180, 45);
+            this.btnHDxuat.TabIndex = 14;
             // 
             // btnLogout
             // 
@@ -362,6 +363,11 @@
             this.panelTop.PerformLayout();
             this.ResumeLayout(false);
 
+        }
+
+        private void btnNxb_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
