@@ -73,7 +73,7 @@ namespace QuanLyBanSach.Forms
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(297, 675);
+            this.panelLeft.Size = new System.Drawing.Size(583, 1233);
             this.panelLeft.TabIndex = 0;
             // 
             // btnBaocao
@@ -91,10 +91,9 @@ namespace QuanLyBanSach.Forms
             this.btnBaocao.Image = ((System.Drawing.Image)(resources.GetObject("btnBaocao.Image")));
             this.btnBaocao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnBaocao.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnBaocao.Location = new System.Drawing.Point(0, 649);
-            this.btnBaocao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBaocao.Location = new System.Drawing.Point(-3, 648);
             this.btnBaocao.Name = "btnBaocao";
-            this.btnBaocao.Size = new System.Drawing.Size(304, 33);
+            this.btnBaocao.Size = new System.Drawing.Size(312, 52);
             this.btnBaocao.TabIndex = 7;
             this.btnBaocao.Text = "Báo cáo thống kê";
             // 
@@ -171,6 +170,7 @@ namespace QuanLyBanSach.Forms
             this.btnHDxuat.Size = new System.Drawing.Size(312, 52);
             this.btnHDxuat.TabIndex = 5;
             this.btnHDxuat.Text = "Quản lý hóa đơn xuất";
+            this.btnHDxuat.Click += new System.EventHandler(this.btnHDxuat_Click_1);
             // 
             // btnLogout
             // 
@@ -336,10 +336,10 @@ namespace QuanLyBanSach.Forms
             this.panelTop.BackColor = System.Drawing.Color.Navy;
             this.panelTop.Controls.Add(this.lbl_val);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(297, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelTop.Location = new System.Drawing.Point(583, 0);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(986, 63);
+            this.panelTop.Size = new System.Drawing.Size(1785, 98);
             this.panelTop.TabIndex = 1;
             this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 

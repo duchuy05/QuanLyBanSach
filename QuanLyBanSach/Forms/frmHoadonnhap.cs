@@ -62,6 +62,19 @@ namespace QuanLyBanSach.Forms
             datagridviewBan.AllowUserToAddRows = false;
             datagridviewBan.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
+        private void ResetValues()
+        {
+            txtSohoadonnhap.Text = "";
+            txtKhuyenmai.Text = "";
+            cboMancc.SelectedIndex = -1;
+            cboManhanvien.SelectedIndex = -1;
+            cboMasach.SelectedIndex = -1;
+            txtGianhap.Text = "0";
+            txtSoluong.Text = "0";
+            txtThanhtien.Text = "0";
+            txtGianhap.Text = "0";
+            mskNgaynhap.Text = "";
+        }
 
         private void guna2HtmlLabel5_Click(object sender, EventArgs e)
         {
@@ -101,6 +114,40 @@ namespace QuanLyBanSach.Forms
         private void cboManhanvien_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void datagridviewBan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string Manv, Mancc, Masach;
+            if (btnThem.Enabled == false)
+            {
+                MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo",
+MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtSohoadonnhap.Focus();
+                return;
+            }
+            if (tblHDNhap.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK,
+MessageBoxIcon.Information);
+                return;
+            }
+            txtSohoadonnhap.Text = datagridviewBan.CurrentRow.Cells["Sohdn"].Value.ToString();
+            txtGianhap.Text = datagridviewBan.CurrentRow.Cells["Gianhap"].Value.ToString();
+            txtKhuyenmai.Text = datagridviewBan.CurrentRow.Cells["Khuyenmai"].Value.ToString();
+            txtSoluong.Text = datagridviewBan.CurrentRow.Cells["Soluong"].Value.ToString();
+            txtThanhtien.Text = datagridviewBan.CurrentRow.Cells["Thanhtien"].Value.ToString();
+            txtTongtien.Text = datagridviewBan.CurrentRow.Cells["Tongtien"].Value.ToString();
+            Manv = datagridviewBan.CurrentRow.Cells["Manv"].Value.ToString();
+            Mancc = datagridviewBan.CurrentRow.Cells["Mancc"].Value.ToString();
+            Masach = datagridviewBan.CurrentRow.Cells["Masach"].Value.ToString();
+            mskNgaynhap.Text = datagridviewBan.CurrentRow.Cells["Ngaynhap"].Value.ToString();
+            cboMancc.Text = Class.Functions.GetFieldValues("SELECT Tenncc FROM tblNcc WHERE Mancc = N'" + Mancc + "'");
+            cboManhanvien.Text = Class.Functions.GetFieldValues("SELECT Tennv FROM tblNhanvien WHERE Manv = N'" + Manv + "'");
+            cboMasach.Text = Class.Functions.GetFieldValues("SELECT Tensach FROM tblSach WHERE Masach = N'" + Masach + "'");
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
+            btnBoqua.Enabled = true;
         }
     }
 }
