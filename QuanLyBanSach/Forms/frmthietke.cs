@@ -120,7 +120,7 @@ namespace QuanLyBanSach.Forms
 
         private void btnHDnhap_Click(object sender, EventArgs e)
         {
-            lbl_val.Text = "Quản lý Hóa đơn nhập";
+            lbl_val.Text = btnHDnhap.Text;
 
             container(new frmHoadonnhap());
         }
@@ -150,9 +150,14 @@ namespace QuanLyBanSach.Forms
 
         private void btnHDxuat_Click_1(object sender, EventArgs e)
         {
-            lbl_val.Text = "Quản lý hóa đơn xuất";
+            lbl_val.Text = btnHDxuat.Text;
 
             container(new frmHoadonban());
+        }
+
+        private void lbl_val_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
