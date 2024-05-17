@@ -508,5 +508,20 @@ txtSohoadonnhap.Text + "'";
             }
 
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTongtien_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mskNgaynhap_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
