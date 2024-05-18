@@ -127,7 +127,9 @@ namespace QuanLyBanSach.Forms
 
         private void btnNhanvien_Click(object sender, EventArgs e)
         {
+            lbl_val.Text = btnNhanvien.Text;
 
+            container(new frmNhanvien());
         }
 
         private void frmthietke_FormClosed(object sender, FormClosedEventArgs e)

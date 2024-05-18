@@ -387,7 +387,9 @@ namespace QuanLyBanSach.Forms
 
         private void btnNxb_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            lbl_val.Text = btnNxb.Text;
+
+            container(new frmNhaxuatban());
         }
 
         #endregion
