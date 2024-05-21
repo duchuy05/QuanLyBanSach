@@ -1,5 +1,4 @@
-﻿using DevExpress.Internal.WinApi.Windows.UI.Notifications;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -140,5 +139,13 @@ namespace QuanLyBanSach.Forms
 
             container(new frmTaikhoan());
         }
+
+        private void btnBaocao_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnBaocaoban.Text;
+
+            container(new frmBaocaoban());
+        }
+
     }
 }

@@ -30,9 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmthietke));
             this.panelLeft = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnBaocao = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBaocaoban = new Guna.UI2.WinForms.Guna2Button();
             this.btnTaikhoan = new Guna.UI2.WinForms.Guna2Button();
-            this.btnKm = new Guna.UI2.WinForms.Guna2Button();
             this.btnHDnhap = new Guna.UI2.WinForms.Guna2Button();
             this.btnHDxuat = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -54,9 +53,8 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.Navy;
-            this.panelLeft.Controls.Add(this.btnBaocao);
+            this.panelLeft.Controls.Add(this.btnBaocaoban);
             this.panelLeft.Controls.Add(this.btnTaikhoan);
-            this.panelLeft.Controls.Add(this.btnKm);
             this.panelLeft.Controls.Add(this.btnHDnhap);
             this.panelLeft.Controls.Add(this.btnHDxuat);
             this.panelLeft.Controls.Add(this.btnLogout);
@@ -71,30 +69,31 @@
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Margin = new System.Windows.Forms.Padding(2);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(223, 641);
+            this.panelLeft.Size = new System.Drawing.Size(223, 719);
             this.panelLeft.TabIndex = 0;
             // 
-            // btnBaocao
+            // btnBaocaoban
             // 
-            this.btnBaocao.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnBaocao.BorderColor = System.Drawing.Color.PowderBlue;
-            this.btnBaocao.BorderRadius = 2;
-            this.btnBaocao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBaocao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBaocao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBaocao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBaocao.FillColor = System.Drawing.Color.LightSteelBlue;
-            this.btnBaocao.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnBaocao.ForeColor = System.Drawing.Color.Black;
-            this.btnBaocao.Image = ((System.Drawing.Image)(resources.GetObject("btnBaocao.Image")));
-            this.btnBaocao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnBaocao.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnBaocao.Location = new System.Drawing.Point(-2, 527);
-            this.btnBaocao.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBaocao.Name = "btnBaocao";
-            this.btnBaocao.Size = new System.Drawing.Size(234, 42);
-            this.btnBaocao.TabIndex = 7;
-            this.btnBaocao.Text = "Báo cáo thống kê";
+            this.btnBaocaoban.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnBaocaoban.BorderColor = System.Drawing.Color.PowderBlue;
+            this.btnBaocaoban.BorderRadius = 2;
+            this.btnBaocaoban.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaocaoban.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaocaoban.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBaocaoban.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBaocaoban.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.btnBaocaoban.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnBaocaoban.ForeColor = System.Drawing.Color.Black;
+            this.btnBaocaoban.Image = ((System.Drawing.Image)(resources.GetObject("btnBaocaoban.Image")));
+            this.btnBaocaoban.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnBaocaoban.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnBaocaoban.Location = new System.Drawing.Point(-5, 481);
+            this.btnBaocaoban.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBaocaoban.Name = "btnBaocaoban";
+            this.btnBaocaoban.Size = new System.Drawing.Size(234, 42);
+            this.btnBaocaoban.TabIndex = 7;
+            this.btnBaocaoban.Text = "Báo cáo bán hàng";
+            this.btnBaocaoban.Click += new System.EventHandler(this.btnBaocao_Click);
             // 
             // btnTaikhoan
             // 
@@ -108,32 +107,13 @@
             this.btnTaikhoan.FillColor = System.Drawing.Color.LightSteelBlue;
             this.btnTaikhoan.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaikhoan.ForeColor = System.Drawing.Color.Black;
-            this.btnTaikhoan.Location = new System.Drawing.Point(-7, 481);
+            this.btnTaikhoan.Location = new System.Drawing.Point(-7, 435);
             this.btnTaikhoan.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaikhoan.Name = "btnTaikhoan";
             this.btnTaikhoan.Size = new System.Drawing.Size(235, 42);
             this.btnTaikhoan.TabIndex = 6;
             this.btnTaikhoan.Text = "Quản lý tài khoản";
             this.btnTaikhoan.Click += new System.EventHandler(this.btnTaikhoan_Click);
-            // 
-            // btnKm
-            // 
-            this.btnKm.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnKm.BorderColor = System.Drawing.Color.PowderBlue;
-            this.btnKm.BorderThickness = 2;
-            this.btnKm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKm.FillColor = System.Drawing.Color.LightSteelBlue;
-            this.btnKm.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKm.ForeColor = System.Drawing.Color.Black;
-            this.btnKm.Location = new System.Drawing.Point(-6, 435);
-            this.btnKm.Margin = new System.Windows.Forms.Padding(2);
-            this.btnKm.Name = "btnKm";
-            this.btnKm.Size = new System.Drawing.Size(234, 42);
-            this.btnKm.TabIndex = 12;
-            this.btnKm.Text = "Quản lý khuyến mãi";
             // 
             // btnHDnhap
             // 
@@ -184,7 +164,7 @@
             this.btnLogout.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(70, 585);
+            this.btnLogout.Location = new System.Drawing.Point(55, 658);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnLogout.Size = new System.Drawing.Size(89, 44);
@@ -333,7 +313,7 @@
             this.panelContent.Location = new System.Drawing.Point(223, 38);
             this.panelContent.Margin = new System.Windows.Forms.Padding(2);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(961, 603);
+            this.panelContent.Size = new System.Drawing.Size(1226, 674);
             this.panelContent.TabIndex = 0;
             this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContent_Paint);
             // 
@@ -344,7 +324,7 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(223, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(961, 39);
+            this.panelTop.Size = new System.Drawing.Size(1228, 39);
             this.panelTop.TabIndex = 1;
             this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -363,7 +343,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 641);
+            this.ClientSize = new System.Drawing.Size(1451, 719);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelLeft);
@@ -391,12 +371,11 @@
         private Guna.UI2.WinForms.Guna2Button btnLoaisach;
         private Guna.UI2.WinForms.Guna2Button btnKhach;
         private Guna.UI2.WinForms.Guna2Button btnNhanvien;
-        private Guna.UI2.WinForms.Guna2Button btnBaocao;
+        private Guna.UI2.WinForms.Guna2Button btnBaocaoban;
         private Guna.UI2.WinForms.Guna2Button btnTaikhoan;
         private Guna.UI2.WinForms.Guna2Button btnHDxuat;
         private Guna.UI2.WinForms.Guna2Button btnHDnhap;
         private Guna.UI2.WinForms.Guna2CircleButton btnLogout;
-        private Guna.UI2.WinForms.Guna2Button btnKm;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
