@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.Internal.WinApi.Windows.UI.Notifications;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -119,12 +120,16 @@ namespace QuanLyBanSach.Forms
 
         private void btnHDnhap_Click(object sender, EventArgs e)
         {
+            lbl_val.Text = btnHDnhap.Text;
 
+            container(new frmHoadonnhap());
         }
 
         private void btnNhanvien_Click(object sender, EventArgs e)
         {
+            lbl_val.Text = btnNhanvien.Text;
 
+            container(new frmNhanvien());
         }
 
         private void frmthietke_FormClosed(object sender, FormClosedEventArgs e)
@@ -139,13 +144,5 @@ namespace QuanLyBanSach.Forms
 
             container(new frmTaikhoan());
         }
-
-        private void btnBaocao_Click(object sender, EventArgs e)
-        {
-            lbl_val.Text = btnBaocaoban.Text;
-
-            container(new frmBaocaoban());
-        }
-
     }
 }

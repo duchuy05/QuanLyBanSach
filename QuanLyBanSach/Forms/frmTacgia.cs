@@ -204,5 +204,10 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
             datagridviewTacgia.DataSource = tblTacgia;
             ResetValues();
         }
+
+        private void txtMatacgia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

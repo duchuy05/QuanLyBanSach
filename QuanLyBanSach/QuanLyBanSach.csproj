@@ -92,6 +92,30 @@
     <Compile Include="Forms\frmDangnhap.Designer.cs">
       <DependentUpon>frmDangnhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmHoadonban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHoadonban.Designer.cs">
+      <DependentUpon>frmHoadonban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHoadonnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHoadonnhap.Designer.cs">
+      <DependentUpon>frmHoadonnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNhanvien.Designer.cs">
+      <DependentUpon>frmNhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNhaxuatban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNhaxuatban.Designer.cs">
+      <DependentUpon>frmNhaxuatban.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,13 +140,31 @@
     <Compile Include="Forms\frmthietke.Designer.cs">
       <DependentUpon>frmthietke.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Forms\frmLoaisach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLoaisach.Designer.cs">
+      <DependentUpon>frmLoaisach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmBaocaoban.resx">
       <DependentUpon>frmBaocaoban.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDangnhap.resx">
       <DependentUpon>frmDangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHoadonban.resx">
+      <DependentUpon>frmHoadonban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHoadonnhap.resx">
+      <DependentUpon>frmHoadonnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNhanvien.resx">
+      <DependentUpon>frmNhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNhaxuatban.resx">
+      <DependentUpon>frmNhaxuatban.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSach.resx">
       <DependentUpon>frmSach.cs</DependentUpon>
@@ -135,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmthietke.resx">
       <DependentUpon>frmthietke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLoaisach.resx">
+      <DependentUpon>frmLoaisach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
