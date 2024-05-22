@@ -76,25 +76,25 @@ namespace QuanLyBanSach.Forms
             // 
             // btnBaocaoban
             // 
-            this.btnBaocao.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnBaocao.BorderColor = System.Drawing.Color.PowderBlue;
-            this.btnBaocao.BorderRadius = 2;
-            this.btnBaocao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBaocao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBaocao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBaocao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBaocao.FillColor = System.Drawing.Color.LightSteelBlue;
-            this.btnBaocao.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnBaocao.ForeColor = System.Drawing.Color.Black;
-            this.btnBaocao.Image = ((System.Drawing.Image)(resources.GetObject("btnBaocao.Image")));
-            this.btnBaocao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnBaocao.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnBaocao.Location = new System.Drawing.Point(-2, 527);
-            this.btnBaocao.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBaocao.Name = "btnBaocao";
-            this.btnBaocao.Size = new System.Drawing.Size(234, 42);
-            this.btnBaocao.TabIndex = 7;
-            this.btnBaocao.Text = "Báo cáo thống kê";
+            this.btnBaocaoban.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnBaocaoban.BorderColor = System.Drawing.Color.PowderBlue;
+            this.btnBaocaoban.BorderRadius = 2;
+            this.btnBaocaoban.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaocaoban.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaocaoban.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBaocaoban.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBaocaoban.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.btnBaocaoban.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnBaocaoban.ForeColor = System.Drawing.Color.Black;
+            this.btnBaocaoban.Image = ((System.Drawing.Image)(resources.GetObject("btnBaocao.Image")));
+            this.btnBaocaoban.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnBaocaoban.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnBaocaoban.Location = new System.Drawing.Point(-2, 527);
+            this.btnBaocaoban.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBaocaoban.Name = "btnBaocao";
+            this.btnBaocaoban.Size = new System.Drawing.Size(234, 42);
+            this.btnBaocaoban.TabIndex = 7;
+            this.btnBaocaoban.Text = "Báo cáo thống kê";
             // 
             // btnTaikhoan
             // 
@@ -117,23 +117,23 @@ namespace QuanLyBanSach.Forms
             this.btnTaikhoan.Click += new System.EventHandler(this.btnTaikhoan_Click);
             // 
             // btnKm
-            // 
-            this.btnKm.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnKm.BorderColor = System.Drawing.Color.PowderBlue;
-            this.btnKm.BorderThickness = 2;
-            this.btnKm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKm.FillColor = System.Drawing.Color.LightSteelBlue;
-            this.btnKm.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKm.ForeColor = System.Drawing.Color.Black;
-            this.btnKm.Location = new System.Drawing.Point(-6, 435);
-            this.btnKm.Margin = new System.Windows.Forms.Padding(2);
-            this.btnKm.Name = "btnKm";
-            this.btnKm.Size = new System.Drawing.Size(234, 42);
-            this.btnKm.TabIndex = 12;
-            this.btnKm.Text = "Quản lý khuyến mãi";
+            //
+            //this.btnKm.BackColor = System.Drawing.Color.RosyBrown;
+            //this.btnKm.BorderColor = System.Drawing.Color.PowderBlue;
+            //this.btnKm.BorderThickness = 2;
+            //this.btnKm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            //this.btnKm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            //this.btnKm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            //this.btnKm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            //this.btnKm.FillColor = System.Drawing.Color.LightSteelBlue;
+            //this.btnKm.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.btnKm.ForeColor = System.Drawing.Color.Black;
+            //this.btnKm.Location = new System.Drawing.Point(-6, 435);
+            //this.btnKm.Margin = new System.Windows.Forms.Padding(2);
+            //this.btnKm.Name = "btnKm";
+            //this.btnKm.Size = new System.Drawing.Size(234, 42);
+            //this.btnKm.TabIndex = 12;
+            //this.btnKm.Text = "Quản lý khuyến mãi";
             // 
             // btnHDnhap
             // 
@@ -381,6 +381,18 @@ namespace QuanLyBanSach.Forms
             this.panelTop.PerformLayout();
             this.ResumeLayout(false);
 
+        }
+
+        private void lbl_val_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void btnHDxuat_Click_1(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnHDxuat.Text;
+
+            container(new frmHoadonban());
         }
 
         private void btnNxb_Click(object sender, EventArgs e)
