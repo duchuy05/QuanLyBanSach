@@ -157,5 +157,12 @@ namespace QuanLyBanSach.Forms
 
             container(new frmHoadonban());
         }
+
+        private void btnBaocaodt_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnBaocaodt.Text;
+
+            container(new frmBaocaodoanhthu());
+        }
     }
 }

@@ -47,14 +47,14 @@ namespace QuanLyBanSach.Forms
             this.btnTacgia = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
             this.lbl_val = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelContent.SuspendLayout();
-            this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLeft
@@ -118,6 +118,7 @@ namespace QuanLyBanSach.Forms
             this.btnBaocaodt.Size = new System.Drawing.Size(235, 42);
             this.btnBaocaodt.TabIndex = 12;
             this.btnBaocaodt.Text = "Báo cáo doanh thu";
+            this.btnBaocaodt.Click += new System.EventHandler(this.btnBaocaodt_Click);
             // 
             // btnBaocaoban
             // 
@@ -355,6 +356,18 @@ namespace QuanLyBanSach.Forms
             this.panelContent.TabIndex = 0;
             this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContent_Paint);
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(965, 603);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 0;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.Navy;
@@ -374,21 +387,9 @@ namespace QuanLyBanSach.Forms
             this.lbl_val.ForeColor = System.Drawing.Color.White;
             this.lbl_val.Location = new System.Drawing.Point(510, 12);
             this.lbl_val.Name = "lbl_val";
-            this.lbl_val.Size = new System.Drawing.Size(102, 27);
+            this.lbl_val.Size = new System.Drawing.Size(126, 33);
             this.lbl_val.TabIndex = 1;
             this.lbl_val.Text = "Trang chủ";
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(965, 603);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 0;
-            this.guna2PictureBox2.TabStop = false;
             // 
             // frmthietke
             // 
@@ -405,9 +406,9 @@ namespace QuanLyBanSach.Forms
             this.panelLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panelContent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

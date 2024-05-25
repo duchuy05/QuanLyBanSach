@@ -86,6 +86,12 @@
     <Compile Include="Forms\frmBaocaoban.Designer.cs">
       <DependentUpon>frmBaocaoban.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmBaocaodoanhthu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBaocaodoanhthu.Designer.cs">
+      <DependentUpon>frmBaocaodoanhthu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmDangnhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmBaocaoban.resx">
       <DependentUpon>frmBaocaoban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBaocaodoanhthu.resx">
+      <DependentUpon>frmBaocaodoanhthu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDangnhap.resx">
       <DependentUpon>frmDangnhap.cs</DependentUpon>
