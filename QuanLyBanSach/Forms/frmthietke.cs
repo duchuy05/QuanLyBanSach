@@ -144,5 +144,12 @@ namespace QuanLyBanSach.Forms
 
             container(new frmTaikhoan());
         }
-    }
+
+		private void btnBaocaoban_Click(object sender, EventArgs e)
+		{
+			lbl_val.Text = btnBaocaoban.Text;
+
+			container(new frmBaocaoban());
+		}
+	}
 }
