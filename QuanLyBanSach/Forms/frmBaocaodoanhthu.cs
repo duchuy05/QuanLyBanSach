@@ -83,12 +83,6 @@ namespace QuanLyBanSach.Forms
         {
             string sql, sql1;
 
-            if (cboTensach.SelectedValue == null || cboTensach.SelectedValue.ToString() == "")
-            {
-                MessageBox.Show("Hãy chọn sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
             sql = "SELECT hd.Ngayban, s.Tensach, ctdx.Soluongxuat, s.Giaban, (ctdx.Soluongxuat * s.Giaban) AS Doanhthu " +
                   "FROM tblChitiethdx ctdx " +
                   "JOIN tblSach s ON ctdx.Masach = s.Masach " +
@@ -98,12 +92,6 @@ namespace QuanLyBanSach.Forms
             if (cboTensach.SelectedValue != null && cboTensach.SelectedValue.ToString() != "")
             {
                 sql += " AND s.Tensach LIKE N'%" + cboTensach.Text + "%'";
-            }
-
-            if (!rdbTheokhoang.Checked && !rdbTheongay.Checked)
-            {
-                MessageBox.Show("Hãy chọn xem báo cáo theo ngày hoặc theo khoảng", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
             }
 
             if (txtGiaban.Text != "")
@@ -131,6 +119,13 @@ namespace QuanLyBanSach.Forms
             }
 
             tblBCDT = Class.Functions.GetDataToTables(sql);
+
+            if (tblBCDT.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có kết quả phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             datagridviewDT.DataSource = tblBCDT;
 
             sql1 = "SELECT SUM(ctdx.Soluongxuat * s.Giaban) AS TongDoanhthu " +
