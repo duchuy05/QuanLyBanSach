@@ -88,6 +88,11 @@ namespace QuanLyBanSach.Forms
                   "JOIN tblSach s ON ctdx.Masach = s.Masach " +
                   "JOIN tblHoadonxuat hd ON ctdx.Sohdx = hd.Sohdx " +
                   "WHERE 1=1";
+            if((rdbTheokhoang.Checked==false)&&(rdbTheongay.Checked==false))
+            {
+                MessageBox.Show("Hãy chọn xem báo cáo theo ngày hoặc theo khoảng","Yêu cầu",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }    
 
             if (cboTensach.SelectedValue != null && cboTensach.SelectedValue.ToString() != "")
             {
