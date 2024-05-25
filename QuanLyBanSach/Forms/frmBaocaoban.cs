@@ -13,6 +13,7 @@ using static System.ComponentModel.Design.ObjectSelectorEditor;
 using Guna.UI2.WinForms; // Thêm dòng này để sử dụng Guna2DateTimePicker
 using System.Data.SqlClient;
 using COMExcel = Microsoft.Office.Interop.Excel;
+using static System.Windows.Forms.Design.AxImporter;
 
 
 namespace QuanLyBanSach.Forms
@@ -100,17 +101,38 @@ namespace QuanLyBanSach.Forms
             cboTenSP.SelectedIndex = -1;
             cboTenKH.SelectedIndex = -1;
             cboTenNV.SelectedIndex = -1;
-            Load_dgridBCBan();
+            string sql = @"SELECT tblHoadonxuat.Sohdx, 
+                      tblChitiethdx.Masach, 
+                      tblSach.Tensach, 
+                      tblChitiethdx.Soluongxuat, 
+                      tblSach.Giaban, 
+                      tblHoadonxuat.Ngayban, 
+                      tblChitiethdx.Thanhtien, 
+                      tblKhach.Tenkhach, 
+                      tblNhanvien.Tennv
+               FROM tblHoadonxuat
+               JOIN tblChitiethdx ON tblHoadonxuat.Sohdx = tblChitiethdx.Sohdx 
+               JOIN tblSach ON tblChitiethdx.Masach = tblSach.Masach 
+               JOIN tblKhach ON tblHoadonxuat.Makh = tblKhach.Makh 
+               JOIN tblNhanvien ON tblHoadonxuat.Manv = tblNhanvien.Manv";
+
+            Load_dgridBCBan(sql);
+            string sql1 = @"SELECT tblChitiethdx.Masach,tblSach.Tensach,SUM(tblChitiethdx.Soluongxuat) AS TongSoLuongBan FROM tblHoadonxuat
+                JOIN tblChitiethdx ON tblHoadonxuat.Sohdx = tblChitiethdx.Sohdx
+                JOIN tblSach ON tblChitiethdx.Masach = tblSach.Masach
+                GROUP BY tblChitiethdx.Masach, tblSach.Tensach";
+
+            Load_dgridTongSPBan(sql1);
         }
         DataTable tblbcx;
-        private void Load_dgridBCBan()
+        private void Load_dgridBCBan(string sql)
         {
-           string sql;
-           sql= @"SELECT tblHoadonxuat.Sohdx, tblChitiethdx.Masach, Tensach, Soluongxuat, Giaban, Ngayban, Thanhtien, Tenkhach, Tennv  FROM tblHoadonxuat 
-                join tblChitiethdx on tblHoadonxuat.Sohdx = tblChitiethdx.Sohdx 
-                join tblSach on tblChitiethdx.Masach = tblSach.Masach 
-                join tblKhach on tblHoadonxuat.Makh = tblKhach.Makh 
-                join tblNhanvien on tblHoadonxuat.Manv = tblNhanvien.Manv";
+            //(string sql;
+            //sql = @"SELECT tblHoadonxuat.Sohdx, tblChitiethdx.Masach, Tensach, Soluongxuat, Giaban, Ngayban, Thanhtien, Tenkhach, Tennv  FROM tblHoadonxuat 
+            //    join tblChitiethdx on tblHoadonxuat.Sohdx = tblChitiethdx.Sohdx 
+            //    join tblSach on tblChitiethdx.Masach = tblSach.Masach 
+            //    join tblKhach on tblHoadonxuat.Makh = tblKhach.Makh 
+            //    join tblNhanvien on tblHoadonxuat.Manv = tblNhanvien.Manv";) bỏ đi
             tblbcx = Class.Functions.GetDataToTables(sql);
             dgridBCBan.DataSource = tblbcx;
             dgridBCBan.Columns[0].HeaderText = "Số hóa đơn xuất";
@@ -122,30 +144,51 @@ namespace QuanLyBanSach.Forms
             dgridBCBan.Columns[6].HeaderText = "Thành tiền";
             dgridBCBan.Columns[7].HeaderText = "Tên khách hàng";
             dgridBCBan.Columns[8].HeaderText = "Tên nhân viên";
-            dgridBCBan.Columns[0].Width = 80;
+            dgridBCBan.Columns[0].Width = 100;
             dgridBCBan.Columns[1].Width = 80;
             dgridBCBan.Columns[2].Width = 80;
             dgridBCBan.Columns[3].Width = 80;
             dgridBCBan.Columns[4].Width = 80;
             dgridBCBan.Columns[5].Width = 80;
-            dgridBCBan.Columns[6].Width = 60;
-            dgridBCBan.Columns[7].Width = 80;
+            dgridBCBan.Columns[6].Width = 80;
+            dgridBCBan.Columns[7].Width = 100;
             dgridBCBan.Columns[8].Width = 100;
             dgridBCBan.AllowUserToAddRows = false;
             dgridBCBan.EditMode = DataGridViewEditMode.EditProgrammatically;
+
+        }
+        DataTable tblTongSPBan;
+        private void Load_dgridTongSPBan(string sql)
+        {
+            //(string sql1;
+            //sql1 = @"SELECT tblChitiethdx.Masach, Tensach, SUM(Soluongxuat) AS TongSoLuongBan 
+            //        FROM tblHoadonxuat 
+            //        JOIN tblChitiethdx ON tblHoadonxuat.Sohdx = tblChitiethdx.Sohdx 
+            //        JOIN tblSach ON tblChitiethdx.Masach = tblSach.Masach 
+            //        GROUP BY tblChitiethdx.Masach, Tensach";) bỏ đi
+            tblTongSPBan = Class.Functions.GetDataToTables(sql);
+            dgridTongSPBan.DataSource = tblTongSPBan;
+            dgridTongSPBan.Columns[0].HeaderText = "Mã sách";
+            dgridTongSPBan.Columns[1].HeaderText = "Tên sách";
+            dgridTongSPBan.Columns[2].HeaderText = "Tổng số lượng bán";
+            dgridTongSPBan.Columns[0].Width = 80;
+            dgridTongSPBan.Columns[1].Width = 80;
+            dgridTongSPBan.Columns[2].Width = 100;
+            dgridTongSPBan.AllowUserToAddRows = false;
+            dgridTongSPBan.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
 
-        
+
         DataTable tblBCban;
         private void btnTim_Click(object sender, EventArgs e)
         {
-            string sql;
+            string sql, sql1;
             //if ((cboSohdx.Text == "") && (cboTenSP.Text == "") && (cboTenKH.Text =="") && (cboTenNV.Text ==""))
             //{
             //    MessageBox.Show("Hãy chọn ít nhất một tiêu chí tìm kiếm", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             //    return;
             //}
-            if ((rdTheoKhoang.Checked == false) && (rdTheoNgay.Checked == false)) 
+            if ((rdTheoKhoang.Checked == false) && (rdTheoNgay.Checked == false))
             {
                 MessageBox.Show("Hãy chọn xem báo cáo theo ngày hoặc theo khoảng", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -157,19 +200,19 @@ namespace QuanLyBanSach.Forms
                 join tblNhanvien on tblHoadonxuat.Manv = tblNhanvien.Manv where 1=1";
             if (cboSohdx.Text != "")
             {
-                sql = sql + " and tblHoadonxuat.Sohdx like N'%" + cboSohdx.Text +"%'";
-            }    
+                sql = sql + " and tblHoadonxuat.Sohdx like N'%" + cboSohdx.Text + "%'";
+            }
             if (cboTenSP.Text != "")
             {
-                sql = sql + " and Tensach like N'%"+cboTenSP.Text+"%'";
-            }    
+                sql = sql + " and Tensach like N'%" + cboTenSP.Text + "%'";
+            }
             if (cboTenKH.Text != "")
             {
                 sql = sql + " and Tenkhach like N'%" + cboTenKH.Text + "%'";
-            }  
+            }
             if (cboTenNV.Text != "")
             {
-                sql = sql + " and Tennv like N'%"+cboTenNV.Text+"%'";
+                sql = sql + " and Tennv like N'%" + cboTenNV.Text + "%'";
             }
             if (rdTheoNgay.Checked)
             {
@@ -179,17 +222,56 @@ namespace QuanLyBanSach.Forms
             {
                 sql = sql + " AND Ngayban between '" + dtTuNgay.Value.ToString("yyyy-MM-dd") + "' AND '" + dtDenNgay.Value.ToString("yyyy-MM-dd") + "'";
             }
-            tblBCban = Class.Functions.GetDataToTables(sql);
-            if (tblBCban.Rows.Count == 0)
+             sql1 = @"SELECT tblChitiethdx.Masach, tblSach.Tensach, SUM(tblChitiethdx.Soluongxuat) AS TongSoLuongBan
+                    FROM tblHoadonxuat
+JOIN tblChitiethdx ON tblHoadonxuat.Sohdx = tblChitiethdx.Sohdx
+JOIN tblSach ON tblChitiethdx.Masach = tblSach.Masach
+JOIN tblKhach ON tblHoadonxuat.Makh = tblKhach.Makh
+JOIN tblNhanvien ON tblHoadonxuat.Manv = tblNhanvien.Manv
+WHERE 1 = 1";
+            //sql1 = "where 1=1";
+            if (cboSohdx.Text != "")
             {
-                MessageBox.Show("Không có bản ghi thỏa mãn điều kiện", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                ResetValues();
+                sql1 = sql1 + " and tblHoadonxuat.Sohdx like N'%" + cboSohdx.Text + "%'";
             }
-            else
+            if (cboTenSP.Text != "")
             {
-                MessageBox.Show("Có " + tblBCban.Rows.Count + " bản ghi thỏa mãn điều kiện", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                dgridBCBan.DataSource = tblBCban;
-                ResetValues(); // Gọi hàm ResetValues sau khi hiển thị kết quả tìm kiếm
+                sql1 = sql1 + " and Tensach like N'%" + cboTenSP.Text + "%'";
+            }
+            if (cboTenKH.Text != "")
+            {
+                sql1 = sql1 + " and Tenkhach like N'%" + cboTenKH.Text + "%'";
+            }
+            if (cboTenNV.Text != "")
+            {
+                sql1 = sql1 + " and Tennv like N'%" + cboTenNV.Text + "%'";
+            }
+            if (rdTheoNgay.Checked)
+            {
+                sql1 = sql1 + " AND Ngayban = '" + dtChonNgay.Value.ToString("yyyy-MM-dd") + "'";
+            }
+            else if (rdTheoKhoang.Checked)
+            {
+                sql1 = sql1 + " AND Ngayban between '" + dtTuNgay.Value.ToString("yyyy-MM-dd") + "' AND '" + dtDenNgay.Value.ToString("yyyy-MM-dd") + "'";
+            }
+            string mainQuery = sql1 + " GROUP BY tblChitiethdx.Masach, tblSach.Tensach order by SUM(tblChitiethdx.Soluongxuat) desc";
+            Load_dgridTongSPBan(mainQuery);
+            Load_dgridBCBan(sql);
+            tblBCban = Class.Functions.GetDataToTables(sql);
+            tblTongSPBan = Class.Functions.GetDataToTables(mainQuery);
+            if (rdTheoNgay.Checked || rdTheoKhoang.Checked)
+            {
+                if (tblBCban.Rows.Count == 0 || tblTongSPBan.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không có bản ghi thỏa mãn điều kiện", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ResetValues();
+                }
+                else
+                {
+                    MessageBox.Show("Có " + tblBCban.Rows.Count + " bản ghi thỏa mãn điều kiện", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    dgridBCBan.DataSource = tblBCban;
+                    ResetValues(); // Gọi hàm ResetValues sau khi hiển thị kết quả tìm kiếm
+                }
             }
         }
         private void ResetValues()
@@ -278,6 +360,5 @@ namespace QuanLyBanSach.Forms
             exApp.Visible = true;
 
         }
-
     }
 }
