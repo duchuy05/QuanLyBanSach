@@ -351,6 +351,18 @@ namespace QuanLyBanSach.Forms
 
         }
 
+        private void lbl_val_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void btnHDxuat_Click_1(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnHDxuat.Text;
+
+            container(new frmHoadonban());
+        }
+
         private void btnNxb_Click(object sender, EventArgs e)
         {
             lbl_val.Text = btnNxb.Text;

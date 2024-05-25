@@ -523,5 +523,10 @@ txtSohoadonnhap.Text + "'";
         {
 
         }
+
+        private void cboMasach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

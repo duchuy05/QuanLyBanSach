@@ -26,16 +26,21 @@ namespace QuanLyBanSach.Forms
             btnThem.Enabled = true;
             btnLuu.Enabled = false;
             btnXoa.Enabled = false;
+            btnInHD.Enabled = false;
             txtMaHDBan.ReadOnly = true;
+            txtTenNhanVien.ReadOnly = true;
+            txtTenKhach.ReadOnly = true;
+            txtDiaChi.ReadOnly = true;
+            txtDienThoai.ReadOnly = true;
             txtDonGiaBan.ReadOnly = true;
             txtThanhTien.ReadOnly = true;
             txtTongtien.ReadOnly = true;
             txtGiamGia.Text = "0";
             txtThanhTien.Text = "0";
             txtTongtien.Text = "0";
-            Functions.FillCombo("SELECT Makh, Tenkhach FROM tblKhach", cboMaKhach, "Makh", "Tenkhach");
+            Functions.FillCombo("SELECT Makh, Tenkhach FROM tblKhach", cboMaKhach, "Makh", "Makh");
             cboMaKhach.SelectedIndex = -1;
-            Functions.FillCombo("SELECT Manv, Tennv FROM tblNhanvien", cboMaNhanVien, "Manv", "Tennv");
+            Functions.FillCombo("SELECT Manv, Tennv FROM tblNhanvien", cboMaNhanVien, "Manv", "Manv");
             cboMaNhanVien.SelectedIndex = -1;
             Functions.FillCombo("SELECT Masach, Tensach FROM tblSach", cboMasach, "Masach", "Tensach");
             cboMasach.SelectedIndex = -1;
@@ -120,7 +125,12 @@ namespace QuanLyBanSach.Forms
 
         private void cboMaNhanVien_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string str;
+            if (cboMaNhanVien.Text == "")
+                txtTenNhanVien.Text = "";
+            // Khi chọn Mã nhân viên thì tên nhân viên tự động hiện ra
+            str = "Select Tennv from tblNhanvien where Manv =N'" + cboMaNhanVien.SelectedValue + "'";
+            txtTenNhanVien.Text = Functions.GetFieldValues(str);
         }
 
         private void guna2HtmlLabel9_Click(object sender, EventArgs e)
@@ -192,7 +202,20 @@ namespace QuanLyBanSach.Forms
 
         private void cboMaKhach_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string str;
+            if (cboMaKhach.Text == "")
+            {
+                txtTenKhach.Text = "";
+                txtDiaChi.Text = "";
+                txtDienThoai.Text = "";
+            }
+            //Khi chọn Mã khách hàng thì các thông tin của khách hàng sẽ hiện ra
+            str = "Select Tenkhach from tblKhach where Makh = N'" + cboMaKhach.SelectedValue + "'";
+            txtTenKhach.Text = Functions.GetFieldValues(str);
+            str = "Select Diachi from tblKhach where Makh = N'" + cboMaKhach.SelectedValue + "'";
+            txtDiaChi.Text = Functions.GetFieldValues(str);
+            str = "Select Sdt from tblKhach where Makh= N'" + cboMaKhach.SelectedValue + "'";
+            txtDienThoai.Text = Functions.GetFieldValues(str);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
