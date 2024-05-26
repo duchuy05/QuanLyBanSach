@@ -32,11 +32,9 @@ namespace QuanLyBanSach.Forms
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
             txtManxb.Enabled = true;
-            txtManxb.Focus();
-            txtDiachinxb.Enabled = false;
-            mskSdtnxb.Enabled = false;
+            btnBoqua.Enabled=true;
             string sql;
-            if ((txtManxb.Text == "") && (txtTennxb.Text == ""))
+            if ((txtManxb.Text == "") && (txtTennxb.Text == "")&&(txtDiachinxb.Text==""))
             {
                 MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -46,6 +44,8 @@ namespace QuanLyBanSach.Forms
                 sql += " AND Manxb LIKE N'%" + txtManxb.Text + "%'";
             if (txtTennxb.Text != "")
                 sql += " AND Tennxb LIKE N'%" + txtTennxb.Text + "%'";
+            if (txtDiachinxb.Text != "")
+                sql += " AND Diachi LIKE N'%" + txtDiachinxb.Text + "%'";
             tblNXB = Functions.GetDataToTable(sql);
             if (tblNXB.Rows.Count == 0)
                 MessageBox.Show("Không có bản ghi thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -214,6 +214,7 @@ namespace QuanLyBanSach.Forms
             btnSua.Enabled = true;
             btnLuu.Enabled = false;
             txtManxb.Enabled = false;
+            LoadDataGridView();
         }
 
         private void datagridviewNXB_Click(object sender, EventArgs e)

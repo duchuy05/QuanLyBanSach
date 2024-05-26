@@ -46,12 +46,10 @@ namespace QuanLyBanSach.Forms
             dtpDenngay.Value = DateTime.Now;
             dtpNgay.Value = DateTime.Now;
             isFirstLoad = false; // Đánh dấu là form đã được load lần đầu tiên
-            Class.Functions.FillCombo("select Tensach from tblSach", cboTensach, "Tensach", "Tensach");
-            cboTensach.SelectedIndex = -1;
         }
         private void ResetValues()
         {
-            cboTensach.Text = "";
+            txtTensach.Text = "";
             txtSoluong.Text = "";
             txtGiaban.Text = "";
             txtDoanhthu.Text = "";
@@ -94,9 +92,9 @@ namespace QuanLyBanSach.Forms
                 return;
             }    
 
-            if (cboTensach.SelectedValue != null && cboTensach.SelectedValue.ToString() != "")
+            if (txtTensach.Text != null && txtTensach.Text != "")
             {
-                sql += " AND s.Tensach LIKE N'%" + cboTensach.Text + "%'";
+                sql += " AND s.Tensach LIKE N'%" + txtTensach.Text + "%'";
             }
 
             if (txtGiaban.Text != "")
@@ -139,9 +137,9 @@ namespace QuanLyBanSach.Forms
                    "JOIN tblHoadonxuat hd ON ctdx.Sohdx = hd.Sohdx " +
                    "WHERE 1=1";
 
-            if (cboTensach.SelectedValue != null && cboTensach.SelectedValue.ToString() != "")
+            if (txtTensach.Text != null && txtTensach.Text != "")
             {
-                sql1 += " AND s.Tensach = N'" + cboTensach.Text + "'";
+                sql1 += " AND s.Tensach = N'" + txtTensach.Text + "'";
             }
 
             if (txtGiaban.Text != "")

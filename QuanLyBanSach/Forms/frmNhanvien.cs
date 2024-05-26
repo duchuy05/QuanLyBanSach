@@ -187,6 +187,7 @@ namespace QuanLyBanSach.Forms
             btnSua.Enabled = true;
             btnLuu.Enabled = false;
             txtManv.Enabled = false;
+            LoadDataGridView();
         }
 
         private void datagridviewNV_Click(object sender, EventArgs e)
@@ -214,11 +215,9 @@ namespace QuanLyBanSach.Forms
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
             txtManv.Enabled = true;
-            txtManv.Focus();
-            txtDiachinv.Enabled = false;
-            mskSdtnv.Enabled=false;
+            btnBoqua.Enabled=true;
             string sql;
-            if ((txtManv.Text == "")&&(txtTennv.Text=="")) 
+            if ((txtManv.Text == "")&&(txtTennv.Text=="")&&(txtDiachinv.Text=="")) 
             {
                 MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -228,6 +227,8 @@ namespace QuanLyBanSach.Forms
                 sql += " AND Manv LIKE N'%" + txtManv.Text + "%'";
             if (txtTennv.Text != "")
                 sql += " AND Tennv LIKE N'%" + txtTennv.Text + "%'";
+            if (txtDiachinv.Text != "")
+                sql += " AND Diachi LIKE N'%" + txtDiachinv.Text + "%'";
             tblNV = Functions.GetDataToTable(sql);
             if (tblNV.Rows.Count == 0)
                 MessageBox.Show("Không có bản ghi thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
