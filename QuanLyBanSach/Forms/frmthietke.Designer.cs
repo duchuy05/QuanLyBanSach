@@ -92,11 +92,12 @@ namespace QuanLyBanSach.Forms
             this.btnBaocao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnBaocao.ImageSize = new System.Drawing.Size(40, 40);
             this.btnBaocao.Location = new System.Drawing.Point(-2, 526);
-            this.btnBaocao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBaocao.Margin = new System.Windows.Forms.Padding(2);
             this.btnBaocao.Name = "btnBaocao";
             this.btnBaocao.Size = new System.Drawing.Size(234, 42);
             this.btnBaocao.TabIndex = 7;
             this.btnBaocao.Text = "Báo cáo thống kê";
+            this.btnBaocao.Click += new System.EventHandler(this.btnBaocao_Click);
             // 
             // btnTaikhoan
             // 
@@ -111,7 +112,7 @@ namespace QuanLyBanSach.Forms
             this.btnTaikhoan.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaikhoan.ForeColor = System.Drawing.Color.Black;
             this.btnTaikhoan.Location = new System.Drawing.Point(-7, 481);
-            this.btnTaikhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTaikhoan.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaikhoan.Name = "btnTaikhoan";
             this.btnTaikhoan.Size = new System.Drawing.Size(235, 42);
             this.btnTaikhoan.TabIndex = 6;
@@ -131,7 +132,7 @@ namespace QuanLyBanSach.Forms
             this.btnKm.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKm.ForeColor = System.Drawing.Color.Black;
             this.btnKm.Location = new System.Drawing.Point(-6, 436);
-            this.btnKm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKm.Margin = new System.Windows.Forms.Padding(2);
             this.btnKm.Name = "btnKm";
             this.btnKm.Size = new System.Drawing.Size(234, 42);
             this.btnKm.TabIndex = 12;
@@ -150,7 +151,7 @@ namespace QuanLyBanSach.Forms
             this.btnHDnhap.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHDnhap.ForeColor = System.Drawing.Color.Black;
             this.btnHDnhap.Location = new System.Drawing.Point(-5, 251);
-            this.btnHDnhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHDnhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnHDnhap.Name = "btnHDnhap";
             this.btnHDnhap.Size = new System.Drawing.Size(233, 42);
             this.btnHDnhap.TabIndex = 4;
@@ -170,7 +171,7 @@ namespace QuanLyBanSach.Forms
             this.btnHDxuat.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHDxuat.ForeColor = System.Drawing.Color.Black;
             this.btnHDxuat.Location = new System.Drawing.Point(-6, 297);
-            this.btnHDxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHDxuat.Margin = new System.Windows.Forms.Padding(2);
             this.btnHDxuat.Name = "btnHDxuat";
             this.btnHDxuat.Size = new System.Drawing.Size(234, 42);
             this.btnHDxuat.TabIndex = 5;
@@ -187,10 +188,10 @@ namespace QuanLyBanSach.Forms
             this.btnLogout.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(70, 585);
+            this.btnLogout.Location = new System.Drawing.Point(54, 576);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnLogout.Size = new System.Drawing.Size(89, 44);
+            this.btnLogout.Size = new System.Drawing.Size(109, 61);
             this.btnLogout.TabIndex = 11;
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
@@ -208,7 +209,7 @@ namespace QuanLyBanSach.Forms
             this.btnKhach.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhach.ForeColor = System.Drawing.Color.Black;
             this.btnKhach.Location = new System.Drawing.Point(-5, 389);
-            this.btnKhach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKhach.Margin = new System.Windows.Forms.Padding(2);
             this.btnKhach.Name = "btnKhach";
             this.btnKhach.Size = new System.Drawing.Size(233, 42);
             this.btnKhach.TabIndex = 9;
@@ -227,7 +228,7 @@ namespace QuanLyBanSach.Forms
             this.btnNhanvien.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanvien.ForeColor = System.Drawing.Color.Black;
             this.btnNhanvien.Location = new System.Drawing.Point(-7, 343);
-            this.btnNhanvien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhanvien.Name = "btnNhanvien";
             this.btnNhanvien.Size = new System.Drawing.Size(239, 42);
             this.btnNhanvien.TabIndex = 8;
@@ -247,7 +248,7 @@ namespace QuanLyBanSach.Forms
             this.btnNxb.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNxb.ForeColor = System.Drawing.Color.Black;
             this.btnNxb.Location = new System.Drawing.Point(-7, 205);
-            this.btnNxb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNxb.Margin = new System.Windows.Forms.Padding(2);
             this.btnNxb.Name = "btnNxb";
             this.btnNxb.Size = new System.Drawing.Size(239, 42);
             this.btnNxb.TabIndex = 3;
@@ -267,7 +268,7 @@ namespace QuanLyBanSach.Forms
             this.btnLoaisach.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoaisach.ForeColor = System.Drawing.Color.Black;
             this.btnLoaisach.Location = new System.Drawing.Point(-7, 113);
-            this.btnLoaisach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoaisach.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoaisach.Name = "btnLoaisach";
             this.btnLoaisach.Size = new System.Drawing.Size(239, 42);
             this.btnLoaisach.TabIndex = 2;
@@ -290,7 +291,7 @@ namespace QuanLyBanSach.Forms
             this.btnSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnSach.ImageSize = new System.Drawing.Size(40, 40);
             this.btnSach.Location = new System.Drawing.Point(-7, 66);
-            this.btnSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSach.Margin = new System.Windows.Forms.Padding(2);
             this.btnSach.Name = "btnSach";
             this.btnSach.Size = new System.Drawing.Size(239, 43);
             this.btnSach.TabIndex = 0;
@@ -311,7 +312,7 @@ namespace QuanLyBanSach.Forms
             this.btnTacgia.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTacgia.ForeColor = System.Drawing.Color.Black;
             this.btnTacgia.Location = new System.Drawing.Point(-5, 159);
-            this.btnTacgia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTacgia.Margin = new System.Windows.Forms.Padding(2);
             this.btnTacgia.Name = "btnTacgia";
             this.btnTacgia.Size = new System.Drawing.Size(237, 42);
             this.btnTacgia.TabIndex = 1;
@@ -335,7 +336,7 @@ namespace QuanLyBanSach.Forms
             // 
             this.panelContent.BackColor = System.Drawing.Color.AliceBlue;
             this.panelContent.Location = new System.Drawing.Point(219, 44);
-            this.panelContent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContent.Margin = new System.Windows.Forms.Padding(2);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1108, 605);
             this.panelContent.TabIndex = 0;
@@ -360,7 +361,7 @@ namespace QuanLyBanSach.Forms
             this.lbl_val.ForeColor = System.Drawing.Color.White;
             this.lbl_val.Location = new System.Drawing.Point(510, 12);
             this.lbl_val.Name = "lbl_val";
-            this.lbl_val.Size = new System.Drawing.Size(102, 27);
+            this.lbl_val.Size = new System.Drawing.Size(126, 33);
             this.lbl_val.TabIndex = 1;
             this.lbl_val.Text = "Trang chủ";
             this.lbl_val.Click += new System.EventHandler(this.lbl_val_Click);
@@ -373,7 +374,7 @@ namespace QuanLyBanSach.Forms
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelLeft);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmthietke";
             this.Text = "Quản lý bán Sách";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmthietke_FormClosed);
@@ -383,6 +384,11 @@ namespace QuanLyBanSach.Forms
             this.panelTop.PerformLayout();
             this.ResumeLayout(false);
 
+        }
+
+        private void btnBaocao_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void btnNxb_Click(object sender, EventArgs e)
