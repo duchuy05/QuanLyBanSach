@@ -19,6 +19,11 @@ namespace QuanLyBanSach.Forms
         {
             InitializeComponent();
         }
+        public string MaHDBan
+        {
+            get { return txtMaHDBan.Text; }
+            set { txtMaHDBan.Text = value; }
+        }
 
         private void frmHoadonban_Load(object sender, EventArgs e)
         {
@@ -26,16 +31,21 @@ namespace QuanLyBanSach.Forms
             btnThem.Enabled = true;
             btnLuu.Enabled = false;
             btnXoa.Enabled = false;
+            btnInHD.Enabled = false;
             txtMaHDBan.ReadOnly = true;
+            txtTenNhanVien.ReadOnly = true;
+            txtTenKhach.ReadOnly = true;
+            txtDiaChi.ReadOnly = true;
+            txtDienThoai.ReadOnly = true;
             txtDonGiaBan.ReadOnly = true;
             txtThanhTien.ReadOnly = true;
             txtTongtien.ReadOnly = true;
             txtGiamGia.Text = "0";
             txtThanhTien.Text = "0";
             txtTongtien.Text = "0";
-            Functions.FillCombo("SELECT Makh, Tenkhach FROM tblKhach", cboMaKhach, "Makh", "Tenkhach");
+            Functions.FillCombo("SELECT Makh, Tenkhach FROM tblKhach", cboMaKhach, "Makh", "Makh");
             cboMaKhach.SelectedIndex = -1;
-            Functions.FillCombo("SELECT Manv, Tennv FROM tblNhanvien", cboMaNhanVien, "Manv", "Tennv");
+            Functions.FillCombo("SELECT Manv, Tennv FROM tblNhanvien", cboMaNhanVien, "Manv", "Manv");
             cboMaNhanVien.SelectedIndex = -1;
             Functions.FillCombo("SELECT Masach, Tensach FROM tblSach", cboMasach, "Masach", "Tensach");
             cboMasach.SelectedIndex = -1;
@@ -120,7 +130,12 @@ namespace QuanLyBanSach.Forms
 
         private void cboMaNhanVien_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string str;
+            if (cboMaNhanVien.Text == "")
+                txtTenNhanVien.Text = "";
+            // Khi chọn Mã nhân viên thì tên nhân viên tự động hiện ra
+            str = "Select Tennv from tblNhanvien where Manv =N'" + cboMaNhanVien.SelectedValue + "'";
+            txtTenNhanVien.Text = Functions.GetFieldValues(str);
         }
 
         private void guna2HtmlLabel9_Click(object sender, EventArgs e)
@@ -155,6 +170,7 @@ namespace QuanLyBanSach.Forms
 
         private void cboMasach_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+            double tt, sl, dg, gg;
             string str;
             if (cboMasach.Text == "")
             {
@@ -163,6 +179,20 @@ namespace QuanLyBanSach.Forms
             // Khi chọn mã hàng thì các thông tin về hàng hiện ra
             str = "SELECT Giaban FROM tblSach WHERE Masach =N'" + cboMasach.SelectedValue + "'";
             txtDonGiaBan.Text = Functions.GetFieldValues(str);
+            if (txtSoluong.Text == "")
+                sl = 0;
+            else
+                sl = Convert.ToDouble(txtSoluong.Text);
+            if (txtGiamGia.Text == "")
+                gg = 0;
+            else
+                gg = Convert.ToDouble(txtGiamGia.Text);
+            if (txtDonGiaBan.Text == "")
+                dg = 0;
+            else
+                dg = Convert.ToDouble(txtDonGiaBan.Text);
+            tt = sl * dg - sl * dg * gg / 100;
+            txtThanhTien.Text = tt.ToString();
         }
 
         private void txtGiamGia_TextChanged(object sender, EventArgs e)
@@ -192,7 +222,20 @@ namespace QuanLyBanSach.Forms
 
         private void cboMaKhach_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string str;
+            if (cboMaKhach.Text == "")
+            {
+                txtTenKhach.Text = "";
+                txtDiaChi.Text = "";
+                txtDienThoai.Text = "";
+            }
+            //Khi chọn Mã khách hàng thì các thông tin của khách hàng sẽ hiện ra
+            str = "Select Tenkhach from tblKhach where Makh = N'" + cboMaKhach.SelectedValue + "'";
+            txtTenKhach.Text = Functions.GetFieldValues(str);
+            str = "Select Diachi from tblKhach where Makh = N'" + cboMaKhach.SelectedValue + "'";
+            txtDiaChi.Text = Functions.GetFieldValues(str);
+            str = "Select Sdt from tblKhach where Makh= N'" + cboMaKhach.SelectedValue + "'";
+            txtDienThoai.Text = Functions.GetFieldValues(str);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -243,7 +286,7 @@ namespace QuanLyBanSach.Forms
                     return;
                 }
                 sql = "INSERT INTO tblHoadonxuat(Sohdx, Ngayban, Manv, Makh, Tongtien) VALUES (N'" + txtMaHDBan.Text.Trim() + "','" +
-                        txtNgayBan.Text.Trim() + "',N'" + cboMaNhanVien.SelectedValue + "',N'" +
+                        Functions.ConvertDateTime(txtNgayBan.Text.Trim()) + "',N'" + cboMaNhanVien.SelectedValue + "',N'" +
                         cboMaKhach.SelectedValue + "'," + txtTongtien.Text + ")";
                 Functions.RunSql(sql);
             }
@@ -347,7 +390,7 @@ namespace QuanLyBanSach.Forms
             double sl, slcon, slxoa;
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string sql = "SELECT Masach,Soluong FROM tblChitiethdx WHERE Sohdx = N'" + txtMaHDBan.Text + "'";
+                string sql = "SELECT Masach,Soluongxuat FROM tblChitiethdx WHERE Sohdx = N'" + txtMaHDBan.Text + "'";
                 DataTable tblHang = Functions.GetDataToTable(sql);
                 for (int hang = 0; hang <= tblHang.Rows.Count - 1; hang++)
                 {
@@ -360,7 +403,7 @@ namespace QuanLyBanSach.Forms
                 }
 
                 //Xóa chi tiết hóa đơn
-                sql = "DELETE tblChitienhdx WHERE Sohdx=N'" + txtMaHDBan.Text + "'";
+                sql = "DELETE tblChitiethdx WHERE Sohdx=N'" + txtMaHDBan.Text + "'";
                 Functions.RunSqlDel(sql);
 
                 //Xóa hóa đơn

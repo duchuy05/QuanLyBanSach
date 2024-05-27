@@ -33,5 +33,16 @@ namespace QuanLyBanSach.Properties {
                 return ((string)(this["ontapkt2ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI\\MSSQLSERVER01;Initial Catalog=dbdotnetqlbs;Integrated Security=Tr" +
+            "ue;Encrypt=True;TrustServerCertificate=True")]
+        public string dbdotnetqlbsConnectionString {
+            get {
+                return ((string)(this["dbdotnetqlbsConnectionString"]));
+            }
+        }
     }
 }

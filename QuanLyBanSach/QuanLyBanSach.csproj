@@ -80,6 +80,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Functions.cs" />
+    <Compile Include="Forms\frmBaocaoban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBaocaoban.Designer.cs">
+      <DependentUpon>frmBaocaoban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBaocaonhaphang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBaocaonhaphang.Designer.cs">
+      <DependentUpon>frmBaocaonhaphang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmBaocaodoanhthu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +115,12 @@
     </Compile>
     <Compile Include="Forms\frmHoadonnhap.Designer.cs">
       <DependentUpon>frmHoadonnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmKhachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmKhachhang.Designer.cs">
+      <DependentUpon>frmKhachhang.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmNhanvien.cs">
       <SubType>Form</SubType>
@@ -146,8 +164,26 @@
     <Compile Include="Forms\frmLoaisach.Designer.cs">
       <DependentUpon>frmLoaisach.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmTimKiemHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTimKiemHDB.Designer.cs">
+      <DependentUpon>frmTimKiemHDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTimKiemHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTimKiemHDN.Designer.cs">
+      <DependentUpon>frmTimKiemHDN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Programs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmBaocaoban.resx">
+      <DependentUpon>frmBaocaoban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBaocaonhaphang.resx">
+      <DependentUpon>frmBaocaonhaphang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmBaocaodoanhthu.resx">
       <DependentUpon>frmBaocaodoanhthu.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmHoadonnhap.resx">
       <DependentUpon>frmHoadonnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmKhachhang.resx">
+      <DependentUpon>frmKhachhang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmNhanvien.resx">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
@@ -180,6 +219,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLoaisach.resx">
       <DependentUpon>frmLoaisach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTimKiemHDB.resx">
+      <DependentUpon>frmTimKiemHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTimKiemHDN.resx">
+      <DependentUpon>frmTimKiemHDN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

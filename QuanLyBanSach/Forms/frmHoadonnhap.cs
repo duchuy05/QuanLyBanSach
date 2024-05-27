@@ -20,10 +20,18 @@ namespace QuanLyBanSach.Forms
         {
             InitializeComponent();
         }
-
+        public string MaHDNhap
+        {
+            get { return txtSohoadonnhap.Text; }
+            set { txtSohoadonnhap.Text = value; }
+        }
         private void frmHoadonnhap_Load(object sender, EventArgs e)
         {
             Class.Functions.ketnoi();
+            txtTenncc.ReadOnly = true;
+            txtTennv.ReadOnly = true;
+            txtDiachi.ReadOnly = true;
+            txtSdt.ReadOnly = true;
             txtSohoadonnhap.ReadOnly = true;
             txtThanhtien.ReadOnly = true;
             txtTongtien.ReadOnly = true;
@@ -33,11 +41,11 @@ namespace QuanLyBanSach.Forms
             txtKhuyenmai.Text = "0";
             txtGianhap.Text = "0";
             txtTongtien.Text = "0";
-            Functions.FillCombo("SELECT Mancc, Tenncc FROM tblNcc", cboMancc, "Mancc", "Tenncc");
+            Functions.FillCombo("SELECT Mancc, Tenncc FROM tblNcc", cboMancc, "Mancc", "Mancc");
             cboMancc.SelectedIndex = -1;
             Functions.FillCombo("SELECT Masach, Tensach FROM tblSach", cboMasach, "Masach", "Tensach");
             cboMasach.SelectedIndex = -1;
-            Functions.FillCombo("SELECT Manv, Tennv FROM tblNhanvien", cboManv, "Manv", "Tennv");
+            Functions.FillCombo("SELECT Manv, Tennv FROM tblNhanvien", cboManv, "Manv", "Manv");
             cboMasach.SelectedIndex = -1;
             Functions.FillCombo("SELECT Sohdn FROM tblChitiethdn", cboSohdn,
            "Sohdn", "Sohdn");
@@ -522,6 +530,44 @@ txtSohoadonnhap.Text + "'";
         private void mskNgaynhap_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void cboMasach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboMasach_SelectedValueChanged(object sender, EventArgs e)
+        {
+            txtGianhap.Text = "";
+        }
+
+        private void cboMancc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string str;
+            if (cboMancc.Text == "")
+            {
+                txtTenncc.Text = "";
+                txtDiachi.Text = "";
+                txtSdt.Text = "";
+            }
+            //Khi chọn Mã khách hàng thì các thông tin của khách hàng sẽ hiện ra
+            str = "Select Tenncc from tblNcc where Mancc = N'" + cboMancc.SelectedValue + "'";
+            txtTenncc.Text = Functions.GetFieldValues(str);
+            str = "Select Diachi from tblNcc where Mancc = N'" + cboMancc.SelectedValue + "'";
+            txtDiachi.Text = Functions.GetFieldValues(str);
+            str = "Select Sdt from tblNcc where Mancc = N'" + cboMancc.SelectedValue + "'";
+            txtSdt.Text = Functions.GetFieldValues(str);
+        }
+
+        private void cboManv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string str;
+            if (cboManv.Text == "")
+                txtTennv.Text = "";
+            // Khi chọn Mã nhân viên thì tên nhân viên tự động hiện ra
+            str = "Select Tennv from tblNhanvien where Manv =N'" + cboManv.SelectedValue + "'";
+            txtTennv.Text = Functions.GetFieldValues(str);
         }
     }
 }

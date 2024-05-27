@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -94,7 +93,9 @@ namespace QuanLyBanSach.Forms
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DangXuat(this, new EventArgs());
+            this.Hide();
+            frmDangnhap a = new frmDangnhap();
+            a.Show();
 
         }
 
@@ -115,7 +116,9 @@ namespace QuanLyBanSach.Forms
 
         private void btnLoaisach_Click(object sender, EventArgs e)
         {
+            lbl_val.Text = btnLoaisach.Text;
 
+            container(new frmLoaisach());
         }
 
         private void btnHDnhap_Click(object sender, EventArgs e)
@@ -145,21 +148,61 @@ namespace QuanLyBanSach.Forms
             container(new frmTaikhoan());
         }
 
-        private void btnHDxuat_Click(object sender, EventArgs e)
-        {
-            
-        }
+		private void btnBaocaoban_Click(object sender, EventArgs e)
+		{
+			lbl_val.Text = btnBaocaoban.Text;
 
-        private void btnHDxuat_Click_1(object sender, EventArgs e)
+			container(new frmBaocaoban());
+		}
+
+        private void btnHDxuat_Click(object sender, EventArgs e)
         {
             lbl_val.Text = btnHDxuat.Text;
 
             container(new frmHoadonban());
         }
 
-        private void lbl_val_Click(object sender, EventArgs e)
+        private void btnBaocaodt_Click(object sender, EventArgs e)
         {
+            lbl_val.Text = btnBaocaodt.Text;
 
+            container(new frmBaocaodoanhthu());
+        }
+
+        private void btnNcc_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnNcc.Text;
+
+            container(new frmNhacungcap());
+        }
+
+        private void btnKhach_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnKhach.Text;
+
+            container(new frmKhachhang());
+        }
+
+        private void btnBaocaonhap_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnBaocaonhap.Text;
+
+            container(new frmBaocaonhaphang());
+        }
+    }
+
+        private void btnTimHDB_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnTimHDB.Text;
+
+            container(new frmTimKiemHDB());
+        }
+
+        private void btnTimHDN_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnTimHDN.Text;
+
+            container(new frmTimKiemHDN());
         }
     }
 }
