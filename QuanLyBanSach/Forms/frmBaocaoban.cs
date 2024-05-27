@@ -276,11 +276,17 @@ WHERE 1 = 1";
         }
         private void ResetValues()
         {
-            // Xóa hết dữ liệu đã chọn trong các ComboBox
             cboSohdx.SelectedIndex = -1;
+            cboSohdx.Text = string.Empty;
+
             cboTenSP.SelectedIndex = -1;
+            cboTenSP.Text = string.Empty;
+
             cboTenKH.SelectedIndex = -1;
+            cboTenKH.Text = string.Empty;
+
             cboTenNV.SelectedIndex = -1;
+            cboTenNV.Text = string.Empty;
         }
 
         private void btnXuat_Click(object sender, EventArgs e)

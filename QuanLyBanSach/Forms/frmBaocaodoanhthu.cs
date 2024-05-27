@@ -40,6 +40,11 @@ namespace QuanLyBanSach.Forms
         private bool isFirstLoad = true;
         private void frmBaocaodoanhthu_Load(object sender, EventArgs e)
         {
+            string sql1 = "SELECT SUM(ctdx.Soluongxuat * s.Giaban) AS TongDoanhthu " +
+                   "FROM tblChitiethdx ctdx " +
+                   "JOIN tblSach s ON ctdx.Masach = s.Masach " +
+                   "JOIN tblHoadonxuat hd ON ctdx.Sohdx = hd.Sohdx " +
+                   "WHERE 1=1";
             Class.Functions.ketnoi();
             LoadDataGridView();
             dtpTungay.Value = DateTime.Now;
@@ -48,6 +53,9 @@ namespace QuanLyBanSach.Forms
             isFirstLoad = false; // Đánh dấu là form đã được load lần đầu tiên
             Class.Functions.FillCombo("select Tensach from tblSach", cboTensach, "Tensach", "Tensach");
             cboTensach.SelectedIndex = -1;
+            txtTongtien.ReadOnly = true;
+            txtTongtien.Text = Functions.GetFieldValues(sql1);
+            lblBangchu.Text = "Bằng chữ: " + Functions.ChuyenSoSangChu(txtTongtien.Text);
         }
         private void ResetValues()
         {

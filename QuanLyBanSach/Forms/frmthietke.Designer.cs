@@ -47,6 +47,7 @@ namespace QuanLyBanSach.Forms
             this.btnTacgia = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnNcc = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
             this.lbl_val = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -60,6 +61,7 @@ namespace QuanLyBanSach.Forms
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.Navy;
+            this.panelLeft.Controls.Add(this.btnNcc);
             this.panelLeft.Controls.Add(this.btnBaocaonhap);
             this.panelLeft.Controls.Add(this.btnBaocaodt);
             this.panelLeft.Controls.Add(this.btnBaocaoban);
@@ -78,7 +80,7 @@ namespace QuanLyBanSach.Forms
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Margin = new System.Windows.Forms.Padding(2);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(223, 708);
+            this.panelLeft.Size = new System.Drawing.Size(223, 900);
             this.panelLeft.TabIndex = 0;
             // 
             // btnBaocaonhap
@@ -124,7 +126,7 @@ namespace QuanLyBanSach.Forms
             // 
             this.btnBaocaoban.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBaocaoban.ForeColor = System.Drawing.Color.White;
-            this.btnBaocaoban.Location = new System.Drawing.Point(3, 491);
+            this.btnBaocaoban.Location = new System.Drawing.Point(0, 491);
             this.btnBaocaoban.Name = "btnBaocaoban";
             this.btnBaocaoban.Size = new System.Drawing.Size(220, 45);
             this.btnBaocaoban.TabIndex = 0;
@@ -201,7 +203,7 @@ namespace QuanLyBanSach.Forms
             this.btnLogout.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(55, 658);
+            this.btnLogout.Location = new System.Drawing.Point(73, 806);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnLogout.Size = new System.Drawing.Size(89, 44);
@@ -356,6 +358,26 @@ namespace QuanLyBanSach.Forms
             this.panelContent.TabIndex = 0;
             this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContent_Paint);
             // 
+            // btnNcc
+            // 
+            this.btnNcc.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnNcc.BorderColor = System.Drawing.Color.PowderBlue;
+            this.btnNcc.BorderThickness = 2;
+            this.btnNcc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNcc.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNcc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNcc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNcc.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.btnNcc.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNcc.ForeColor = System.Drawing.Color.Black;
+            this.btnNcc.Location = new System.Drawing.Point(-7, 670);
+            this.btnNcc.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNcc.Name = "btnNcc";
+            this.btnNcc.Size = new System.Drawing.Size(235, 42);
+            this.btnNcc.TabIndex = 14;
+            this.btnNcc.Text = "Quản lý nhà cung cấp";
+            this.btnNcc.Click += new System.EventHandler(this.btnNcc_Click);
+            // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -387,7 +409,7 @@ namespace QuanLyBanSach.Forms
             this.lbl_val.ForeColor = System.Drawing.Color.White;
             this.lbl_val.Location = new System.Drawing.Point(510, 12);
             this.lbl_val.Name = "lbl_val";
-            this.lbl_val.Size = new System.Drawing.Size(126, 33);
+            this.lbl_val.Size = new System.Drawing.Size(102, 27);
             this.lbl_val.TabIndex = 1;
             this.lbl_val.Text = "Trang chủ";
             // 
@@ -395,7 +417,7 @@ namespace QuanLyBanSach.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 708);
+            this.ClientSize = new System.Drawing.Size(1184, 900);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelLeft);
@@ -453,5 +475,6 @@ namespace QuanLyBanSach.Forms
         private Guna.UI2.WinForms.Guna2Button btnBaocaonhap;
         private Guna.UI2.WinForms.Guna2Button btnBaocaodt;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2Button btnNcc;
     }
 }

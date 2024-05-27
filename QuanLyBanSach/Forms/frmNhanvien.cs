@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace QuanLyBanSach.Forms
 {
     public partial class frmNhanvien : Form
     {
+        DataTable tblNV;
         public frmNhanvien()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace QuanLyBanSach.Forms
         private void frmNhanvien_Load(object sender, EventArgs e)
         {
             Class.Functions.ketnoi();
-            txtManv.Enabled = false;
+            txtManv.Enabled = true;
             btnLuu.Enabled = false;
             btnBoqua.Enabled = false;
             LoadDataGridView();
@@ -37,8 +37,8 @@ namespace QuanLyBanSach.Forms
             btnSua.Enabled = false;
             btnBoqua.Enabled = true;
             ResetValues();
-            txtManv.Enabled = true;
-            txtManv.Focus();
+            txtManv.Text = Functions.GenerateKeyNv("NV");
+            txtManv.Enabled = false;
             LoadDataGridView();
         }
         private void ResetValues()
@@ -48,7 +48,7 @@ namespace QuanLyBanSach.Forms
             txtDiachinv.Text = "";
             mskSdtnv.Text = "";
         }
-        DataTable tblNV;
+        
         private void LoadDataGridView()
         {
             string sql;
@@ -94,7 +94,7 @@ namespace QuanLyBanSach.Forms
                 mskSdtnv.Focus();
                 return;
             }
-            sql = "SELECT Manv FROM tblNxb WHERE Manv=N'" + txtManv.Text.Trim() + "'";
+            sql = "SELECT Manv FROM tblNhanvien WHERE Manv=N'" + txtManv.Text.Trim() + "'";
             if (Functions.CheckKey(sql))
             {
                 MessageBox.Show("Mã nhân viên này đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -102,8 +102,8 @@ namespace QuanLyBanSach.Forms
                 return;
             }
             //Chèn thêm
-            sql = "INSERT INTO tblNhanvien VALUES (N'" + txtManv.Text.Trim() +
-                "',N'" + txtTennv.Text.Trim() + "',N'" + txtDiachinv.Text.Trim() + "','" + mskSdtnv.Text + "')";
+            sql = "INSERT INTO tblNhanvien (Manv, Tennv, Diachi, Sdt) VALUES (N'" + txtManv.Text.Trim() +
+                "',N'" + txtTennv.Text.Trim() + "',N'" + txtDiachinv.Text.Trim() + "','" + mskSdtnv.Text.Trim() + "')";
             Functions.RunSql(sql);
             LoadDataGridView();
             ResetValues();
@@ -148,8 +148,8 @@ namespace QuanLyBanSach.Forms
                 return;
             }
             sql = "UPDATE tblNhanvien SET Tennv=N'" + txtTennv.Text.Trim().ToString() + "',Diachi=N'" +
-                txtDiachinv.Text.Trim().ToString() + "',Sdt='" + mskSdtnv.Text.ToString() +
-                "' WHERE Manv=N'" + txtManv.Text + "'";
+                txtDiachinv.Text.Trim().ToString() + "',Sdt='" + mskSdtnv.Text.Trim().ToString() +
+                "' WHERE Manv=N'" + txtManv.Text.Trim() + "'";
             Functions.RunSql(sql);
             LoadDataGridView();
             ResetValues();
@@ -171,7 +171,7 @@ namespace QuanLyBanSach.Forms
             }
             if (MessageBox.Show("Bạn có muốn xoá bản ghi này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                sql = "DELETE tblNhanvien WHERE Manv=N'" + txtManv.Text + "'";
+                sql = "DELETE tblNhanvien WHERE Manv=N'" + txtManv.Text.Trim() + "'";
                 Functions.RunSqlDel(sql);
                 LoadDataGridView();
                 ResetValues();
@@ -186,7 +186,7 @@ namespace QuanLyBanSach.Forms
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
             btnLuu.Enabled = false;
-            txtManv.Enabled = false;
+            txtManv.Enabled = true;
         }
 
         private void datagridviewNV_Click(object sender, EventArgs e)
@@ -213,28 +213,31 @@ namespace QuanLyBanSach.Forms
 
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
-            txtManv.Enabled = true;
-            txtManv.Focus();
-            txtDiachinv.Enabled = false;
-            mskSdtnv.Enabled=false;
+            
             string sql;
-            if ((txtManv.Text == "")&&(txtTennv.Text=="")) 
+            if ((txtManv.Text == "")&&(txtTennv.Text=="") && (txtDiachinv.Text == "") && (mskSdtnv.Text == "(   )    -")) 
             {
                 MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            sql = "SELECT * from tblNhanvien WHERE 1=1";
+            sql = "SELECT * FROM tblNhanvien WHERE 1=1";
             if (txtManv.Text != "")
-                sql += " AND Manv LIKE N'%" + txtManv.Text + "%'";
+                sql = sql + " AND Manv LIKE N'%" + txtManv.Text + "%'";
             if (txtTennv.Text != "")
-                sql += " AND Tennv LIKE N'%" + txtTennv.Text + "%'";
+                sql = sql + " AND Tennv LIKE N'%" + txtTennv.Text + "%'";
+            if (txtDiachinv.Text != "")
+                sql = sql + " AND Diachi LIKE N'%" + txtDiachinv.Text + "%'";
+            if (mskSdtnv.Text != "")
+                sql = sql + " AND Sdt LIKE '%" + mskSdtnv.Text + "%'";
             tblNV = Functions.GetDataToTable(sql);
             if (tblNV.Rows.Count == 0)
-                MessageBox.Show("Không có bản ghi thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            { MessageBox.Show("Không có bản ghi thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                LoadDataGridView();
+            }
             else MessageBox.Show("Có " + tblNV.Rows.Count + "  bản ghi thoả mãn điều kiện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             datagridviewNV.DataSource = tblNV;
             ResetValues();
-            datagridviewNV.Refresh();
         }
+
     }
 }
