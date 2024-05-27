@@ -150,5 +150,19 @@ namespace QuanLyBanSach.Forms
 
 			container(new frmBaocaoban());
 		}
-	}
+
+        private void btnTimHDB_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnTimHDB.Text;
+
+            container(new frmTimKiemHDB());
+        }
+
+        private void btnTimHDN_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnTimHDN.Text;
+
+            container(new frmTimKiemHDN());
+        }
+    }
 }

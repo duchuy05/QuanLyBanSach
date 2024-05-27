@@ -19,6 +19,11 @@ namespace QuanLyBanSach.Forms
         {
             InitializeComponent();
         }
+        public string MaHDBan
+        {
+            get { return txtMaHDBan.Text; }
+            set { txtMaHDBan.Text = value; }
+        }
 
         private void frmHoadonban_Load(object sender, EventArgs e)
         {

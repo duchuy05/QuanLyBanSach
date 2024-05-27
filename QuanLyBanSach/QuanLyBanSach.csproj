@@ -146,6 +146,18 @@
     <Compile Include="Forms\frmLoaisach.Designer.cs">
       <DependentUpon>frmLoaisach.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmTimKiemHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTimKiemHDB.Designer.cs">
+      <DependentUpon>frmTimKiemHDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTimKiemHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTimKiemHDN.Designer.cs">
+      <DependentUpon>frmTimKiemHDN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Programs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmBaocaoban.resx">
@@ -180,6 +192,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLoaisach.resx">
       <DependentUpon>frmLoaisach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTimKiemHDB.resx">
+      <DependentUpon>frmTimKiemHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTimKiemHDN.resx">
+      <DependentUpon>frmTimKiemHDN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

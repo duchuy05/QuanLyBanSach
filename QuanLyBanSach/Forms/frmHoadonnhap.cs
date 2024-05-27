@@ -20,7 +20,11 @@ namespace QuanLyBanSach.Forms
         {
             InitializeComponent();
         }
-
+        public string MaHDNhap
+        {
+            get { return txtSohoadonnhap.Text; }
+            set { txtSohoadonnhap.Text = value; }
+        }
         private void frmHoadonnhap_Load(object sender, EventArgs e)
         {
             Class.Functions.ketnoi();

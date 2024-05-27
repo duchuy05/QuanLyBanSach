@@ -32,6 +32,8 @@ namespace QuanLyBanSach.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmthietke));
             this.panelLeft = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnTimHDN = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTimHDB = new Guna.UI2.WinForms.Guna2Button();
             this.btnBaocaonhap = new Guna.UI2.WinForms.Guna2Button();
             this.btnBaocaodt = new Guna.UI2.WinForms.Guna2Button();
             this.btnBaocaoban = new Guna.UI2.WinForms.Guna2Button();
@@ -57,6 +59,8 @@ namespace QuanLyBanSach.Forms
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.Navy;
+            this.panelLeft.Controls.Add(this.btnTimHDN);
+            this.panelLeft.Controls.Add(this.btnTimHDB);
             this.panelLeft.Controls.Add(this.btnBaocaonhap);
             this.panelLeft.Controls.Add(this.btnBaocaodt);
             this.panelLeft.Controls.Add(this.btnBaocaoban);
@@ -75,8 +79,48 @@ namespace QuanLyBanSach.Forms
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Margin = new System.Windows.Forms.Padding(2);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(223, 641);
+            this.panelLeft.Size = new System.Drawing.Size(223, 816);
             this.panelLeft.TabIndex = 0;
+            // 
+            // btnTimHDN
+            // 
+            this.btnTimHDN.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnTimHDN.BorderColor = System.Drawing.Color.PowderBlue;
+            this.btnTimHDN.BorderThickness = 2;
+            this.btnTimHDN.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimHDN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimHDN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTimHDN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimHDN.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.btnTimHDN.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimHDN.ForeColor = System.Drawing.Color.Black;
+            this.btnTimHDN.Location = new System.Drawing.Point(-6, 691);
+            this.btnTimHDN.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTimHDN.Name = "btnTimHDN";
+            this.btnTimHDN.Size = new System.Drawing.Size(235, 42);
+            this.btnTimHDN.TabIndex = 15;
+            this.btnTimHDN.Text = "Tìm kiếm hóa đơn nhập";
+            this.btnTimHDN.Click += new System.EventHandler(this.btnTimHDN_Click);
+            // 
+            // btnTimHDB
+            // 
+            this.btnTimHDB.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnTimHDB.BorderColor = System.Drawing.Color.PowderBlue;
+            this.btnTimHDB.BorderThickness = 2;
+            this.btnTimHDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimHDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimHDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTimHDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimHDB.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.btnTimHDB.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimHDB.ForeColor = System.Drawing.Color.Black;
+            this.btnTimHDB.Location = new System.Drawing.Point(-3, 645);
+            this.btnTimHDB.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTimHDB.Name = "btnTimHDB";
+            this.btnTimHDB.Size = new System.Drawing.Size(235, 42);
+            this.btnTimHDB.TabIndex = 14;
+            this.btnTimHDB.Text = "Tìm kiếm hóa đơn xuất";
+            this.btnTimHDB.Click += new System.EventHandler(this.btnTimHDB_Click);
             // 
             // btnBaocaonhap
             // 
@@ -196,7 +240,7 @@ namespace QuanLyBanSach.Forms
             this.btnLogout.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(55, 658);
+            this.btnLogout.Location = new System.Drawing.Point(63, 760);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnLogout.Size = new System.Drawing.Size(89, 44);
@@ -346,7 +390,7 @@ namespace QuanLyBanSach.Forms
             this.panelContent.Location = new System.Drawing.Point(227, 38);
             this.panelContent.Margin = new System.Windows.Forms.Padding(2);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(961, 603);
+            this.panelContent.Size = new System.Drawing.Size(961, 766);
             this.panelContent.TabIndex = 0;
             this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContent_Paint);
             // 
@@ -377,7 +421,7 @@ namespace QuanLyBanSach.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 641);
+            this.ClientSize = new System.Drawing.Size(1184, 816);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelLeft);
@@ -432,5 +476,7 @@ namespace QuanLyBanSach.Forms
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnBaocaonhap;
         private Guna.UI2.WinForms.Guna2Button btnBaocaodt;
+        private Guna.UI2.WinForms.Guna2Button btnTimHDN;
+        private Guna.UI2.WinForms.Guna2Button btnTimHDB;
     }
 }
