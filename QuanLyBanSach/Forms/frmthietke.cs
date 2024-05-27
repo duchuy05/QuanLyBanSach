@@ -93,7 +93,9 @@ namespace QuanLyBanSach.Forms
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DangXuat(this, new EventArgs());
+            this.Hide();
+            frmDangnhap a = new frmDangnhap();
+            a.Show();
 
         }
 
@@ -114,7 +116,9 @@ namespace QuanLyBanSach.Forms
 
         private void btnLoaisach_Click(object sender, EventArgs e)
         {
+            lbl_val.Text = btnLoaisach.Text;
 
+            container(new frmLoaisach());
         }
 
         private void btnHDnhap_Click(object sender, EventArgs e)
@@ -150,6 +154,42 @@ namespace QuanLyBanSach.Forms
 
 			container(new frmBaocaoban());
 		}
+
+        private void btnHDxuat_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnHDxuat.Text;
+
+            container(new frmHoadonban());
+        }
+
+        private void btnBaocaodt_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnBaocaodt.Text;
+
+            container(new frmBaocaodoanhthu());
+        }
+
+        private void btnNcc_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnNcc.Text;
+
+            container(new frmNhacungcap());
+        }
+
+        private void btnKhach_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnKhach.Text;
+
+            container(new frmKhachhang());
+        }
+
+        private void btnBaocaonhap_Click(object sender, EventArgs e)
+        {
+            lbl_val.Text = btnBaocaonhap.Text;
+
+            container(new frmBaocaonhaphang());
+        }
+    }
 
         private void btnTimHDB_Click(object sender, EventArgs e)
         {

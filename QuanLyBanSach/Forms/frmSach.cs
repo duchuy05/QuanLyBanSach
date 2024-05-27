@@ -71,11 +71,12 @@ namespace QuanLyBanSach.Forms
             cboMaloai.SelectedIndex = -1;
             cboMatacgia.SelectedIndex = -1;
             cboManxb.SelectedIndex = -1;
-            txtSoluong.Text = "0";
-            txtGianhap.Text = "0";
-            txtGiaban.Enabled = false;  
-            txtSoluong.Enabled = false;
-            txtGianhap.Enabled = false;
+            txtSoluong.Text = "";
+            txtGianhap.Text = "";
+            txtGiaban.Text = "";
+            //txtGiaban.Enabled = false;  
+            //txtSoluong.Enabled = false;
+            //txtGianhap.Enabled = false;
             txtSotrang.Text = "";
             txtAnh.Text = "";
             picAnh.Image = null;
@@ -133,6 +134,9 @@ MessageBoxIcon.Information);
             btnLuu.Enabled = true;
             btnThem.Enabled = false;
             ResetValues();
+            txtGiaban.Enabled = false;
+            txtGianhap.Enabled = false;
+            txtSoluong.Enabled = false;
             txtMasach.Enabled = true;
             txtMasach.Focus();
         }
@@ -191,7 +195,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
             sql = "SELECT Masach FROM tblSach WHERE Masach=N'" + txtMasach.Text.Trim() + "'";
             if (Functions.CheckKey(sql))
             {
-                MessageBox.Show("Mã hàng này đã có, bạn phải nhập mã khác", "Thông báo",
+                MessageBox.Show("Mã sách này đã có, bạn phải nhập mã khác", "Thông báo",
 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtMasach.Focus();
                 txtMasach.Text = "";
@@ -203,8 +207,8 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtAnh.Text = "";
             }
 
-            sql = "INSERT INTO tblSach(Masach,Tensach,Maloai, Matacgia, Manxb, Soluong, Gianhap, Giaban, Anh, Sotrang) VALUES(N'" + txtMasach.Text.Trim() +
-"',N'" + txtTensach.Text.Trim() + "',N'" + cboMaloai.SelectedValue.ToString() + "',N'" + cboMatacgia.SelectedValue.ToString()  + "',N'" + cboManxb.SelectedValue.ToString() + "','" + txtSoluong.Text.Trim() + "','" + txtGianhap.Text.Trim() + "','"  + txtGiaban.Text.Trim() + "','" + txtAnh.Text + "','" + txtSotrang.Text.Trim() + "')";
+            sql = "INSERT INTO tblSach(Masach,Tensach,Maloai, Matacgia, Manxb, Gianhap, Soluong, Giaban, Anh, Sotrang) VALUES(N'" + txtMasach.Text.Trim() +
+"',N'" + txtTensach.Text.Trim() + "',N'" + cboMaloai.SelectedValue.ToString() + "',N'" + cboMatacgia.SelectedValue.ToString()  + "',N'" + cboManxb.SelectedValue.ToString() + "','" + txtGianhap.Text.Trim() + "','" + 0 + "','"  + txtGiaban.Text.Trim() + "','" + txtAnh.Text + "','" + txtSotrang.Text.Trim() + "')";
             Functions.RunSql(sql);
             load_datagrid();
             ResetValues();
@@ -318,7 +322,7 @@ MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
         {
             txtMasach.Enabled = true;
             string sql;
-            if ((txtMasach.Text == "") && (txtTensach.Text == "") && (cboMaloai.Text =="") && (cboManxb.Text =="") && (cboMatacgia.Text == "") && (txtSotrang.Text == "") && (txtGiaban.Text == "") && (txtGianhap.Text == ""))
+            if ((txtMasach.Text == "") && (txtTensach.Text == "") && (cboMaloai.Text =="") && (cboManxb.Text =="") && (cboMatacgia.Text == "") && (txtSotrang.Text == "") && (txtGiaban.Text == "") && (txtGianhap.Text == "") && (txtSoluong.Text == ""))
             {
                 MessageBox.Show("Hãy nhập một điều kiện tìm kiếm!!!", "Yêu cầu ...",
 MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -341,6 +345,8 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 sql = sql + " AND Giaban Like N'%" + txtGiaban.Text + "%'";
             if (txtGianhap.Text != "")
                 sql = sql + " AND Gianhap Like N'%" + txtGianhap.Text + "%'";
+            if (txtSoluong.Text != "")
+                sql = sql + " AND Soluong Like N'%" + txtSoluong.Text + "%'";
             tblSach = Functions.GetDataToTable(sql);
             if (tblSach.Rows.Count == 0)
                 MessageBox.Show("Không có bản ghi thỏa mãn điều kiện!!!", "Thông báo",
