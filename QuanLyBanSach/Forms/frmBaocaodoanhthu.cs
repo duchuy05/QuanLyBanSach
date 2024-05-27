@@ -40,26 +40,16 @@ namespace QuanLyBanSach.Forms
         private bool isFirstLoad = true;
         private void frmBaocaodoanhthu_Load(object sender, EventArgs e)
         {
-            string sql1 = "SELECT SUM(ctdx.Soluongxuat * s.Giaban) AS TongDoanhthu " +
-                   "FROM tblChitiethdx ctdx " +
-                   "JOIN tblSach s ON ctdx.Masach = s.Masach " +
-                   "JOIN tblHoadonxuat hd ON ctdx.Sohdx = hd.Sohdx " +
-                   "WHERE 1=1";
             Class.Functions.ketnoi();
             LoadDataGridView();
             dtpTungay.Value = DateTime.Now;
             dtpDenngay.Value = DateTime.Now;
             dtpNgay.Value = DateTime.Now;
             isFirstLoad = false; // Đánh dấu là form đã được load lần đầu tiên
-            Class.Functions.FillCombo("select Tensach from tblSach", cboTensach, "Tensach", "Tensach");
-            cboTensach.SelectedIndex = -1;
-            txtTongtien.ReadOnly = true;
-            txtTongtien.Text = Functions.GetFieldValues(sql1);
-            lblBangchu.Text = "Bằng chữ: " + Functions.ChuyenSoSangChu(txtTongtien.Text);
         }
         private void ResetValues()
         {
-            cboTensach.Text = "";
+            txtTensach.Text = "";
             txtSoluong.Text = "";
             txtGiaban.Text = "";
             txtDoanhthu.Text = "";
@@ -102,9 +92,9 @@ namespace QuanLyBanSach.Forms
                 return;
             }    
 
-            if (cboTensach.SelectedValue != null && cboTensach.SelectedValue.ToString() != "")
+            if (txtTensach.Text != null && txtTensach.Text != "")
             {
-                sql += " AND s.Tensach LIKE N'%" + cboTensach.Text + "%'";
+                sql += " AND s.Tensach LIKE N'%" + txtTensach.Text + "%'";
             }
 
             if (txtGiaban.Text != "")
@@ -147,9 +137,9 @@ namespace QuanLyBanSach.Forms
                    "JOIN tblHoadonxuat hd ON ctdx.Sohdx = hd.Sohdx " +
                    "WHERE 1=1";
 
-            if (cboTensach.SelectedValue != null && cboTensach.SelectedValue.ToString() != "")
+            if (txtTensach.Text != null && txtTensach.Text != "")
             {
-                sql1 += " AND s.Tensach = N'" + cboTensach.Text + "'";
+                sql1 += " AND s.Tensach = N'" + txtTensach.Text + "'";
             }
 
             if (txtGiaban.Text != "")

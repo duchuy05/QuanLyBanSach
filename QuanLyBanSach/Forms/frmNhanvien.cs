@@ -186,7 +186,8 @@ namespace QuanLyBanSach.Forms
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
             btnLuu.Enabled = false;
-            txtManv.Enabled = true;
+            txtManv.Enabled = false;
+            LoadDataGridView();
         }
 
         private void datagridviewNV_Click(object sender, EventArgs e)
@@ -213,22 +214,23 @@ namespace QuanLyBanSach.Forms
 
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
-            
+            txtManv.Enabled = true;
+            btnBoqua.Enabled=true;
+            txtDiachinv.Enabled = false;
+            if ((txtManv.Text == "")&&(txtTennv.Text=="")&&(txtDiachinv.Text=="")) 
             string sql;
-            if ((txtManv.Text == "")&&(txtTennv.Text=="") && (txtDiachinv.Text == "") && (mskSdtnv.Text == "(   )    -")) 
+            if ((txtManv.Text == "")&&(txtTennv.Text=="")) 
             {
                 MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             sql = "SELECT * FROM tblNhanvien WHERE 1=1";
             if (txtManv.Text != "")
-                sql = sql + " AND Manv LIKE N'%" + txtManv.Text + "%'";
-            if (txtTennv.Text != "")
-                sql = sql + " AND Tennv LIKE N'%" + txtTennv.Text + "%'";
+                sql += " AND Tennv LIKE N'%" + txtTennv.Text + "%'";
             if (txtDiachinv.Text != "")
-                sql = sql + " AND Diachi LIKE N'%" + txtDiachinv.Text + "%'";
-            if (mskSdtnv.Text != "")
-                sql = sql + " AND Sdt LIKE '%" + mskSdtnv.Text + "%'";
+                sql += " AND Diachi LIKE N'%" + txtDiachinv.Text + "%'";
+            if (txtTennv.Text != "")
+                sql += " AND Tennv LIKE N'%" + txtTennv.Text + "%'";
             tblNV = Functions.GetDataToTable(sql);
             if (tblNV.Rows.Count == 0)
             { MessageBox.Show("Không có bản ghi thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); 

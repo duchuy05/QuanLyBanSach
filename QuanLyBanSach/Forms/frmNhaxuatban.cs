@@ -33,11 +33,9 @@ namespace QuanLyBanSach.Forms
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
             txtManxb.Enabled = true;
-            txtManxb.Focus();
-            txtDiachinxb.Enabled = true;
-            mskSdtnxb.Enabled = true;
+            btnBoqua.Enabled=true;
             string sql;
-            if ((txtManxb.Text == "") && (txtTennxb.Text == "") && (txtDiachinxb.Text == "") && (mskSdtnxb.Text == "(   )    -"))
+            if ((txtManxb.Text == "") && (txtTennxb.Text == "")&&(txtDiachinxb.Text==""))
             {
                 MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -49,8 +47,6 @@ namespace QuanLyBanSach.Forms
                 sql += " AND Tennxb LIKE N'%" + txtTennxb.Text + "%'";
             if (txtDiachinxb.Text != "")
                 sql += " AND Diachi LIKE N'%" + txtDiachinxb.Text + "%'";
-            if (mskSdtnxb.Text != "")
-                sql += " AND Sdt LIKE N'%" + mskSdtnxb.Text + "%'";
             tblNXB = Functions.GetDataToTable(sql);
             if (tblNXB.Rows.Count == 0)
                 MessageBox.Show("Không có bản ghi thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -219,6 +215,7 @@ namespace QuanLyBanSach.Forms
             btnSua.Enabled = true;
             btnLuu.Enabled = false;
             txtManxb.Enabled = false;
+            LoadDataGridView();
         }
 
         private void datagridviewNXB_Click(object sender, EventArgs e)

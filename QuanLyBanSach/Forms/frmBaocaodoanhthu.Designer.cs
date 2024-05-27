@@ -48,12 +48,12 @@
             this.rdbTheongay = new Guna.UI2.WinForms.Guna2RadioButton();
             this.txtGiaban = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSoluong = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cboTensach = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnTimkiem = new Guna.UI2.WinForms.Guna2Button();
             this.datagridviewDT = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.txtTensach = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewDT)).BeginInit();
             this.SuspendLayout();
@@ -118,6 +118,7 @@
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.Controls.Add(this.txtTensach);
             this.guna2GroupBox1.Controls.Add(this.dtpDenngay);
             this.guna2GroupBox1.Controls.Add(this.dtpTungay);
             this.guna2GroupBox1.Controls.Add(this.dtpNgay);
@@ -130,7 +131,6 @@
             this.guna2GroupBox1.Controls.Add(this.rdbTheongay);
             this.guna2GroupBox1.Controls.Add(this.txtGiaban);
             this.guna2GroupBox1.Controls.Add(this.txtSoluong);
-            this.guna2GroupBox1.Controls.Add(this.cboTensach);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel1);
@@ -331,7 +331,7 @@
             this.txtSoluong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoluong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSoluong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoluong.Location = new System.Drawing.Point(142, 94);
+            this.txtSoluong.Location = new System.Drawing.Point(142, 96);
             this.txtSoluong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSoluong.Name = "txtSoluong";
             this.txtSoluong.PasswordChar = '\0';
@@ -339,21 +339,6 @@
             this.txtSoluong.SelectedText = "";
             this.txtSoluong.Size = new System.Drawing.Size(184, 33);
             this.txtSoluong.TabIndex = 71;
-            // 
-            // cboTensach
-            // 
-            this.cboTensach.BackColor = System.Drawing.Color.Transparent;
-            this.cboTensach.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboTensach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTensach.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboTensach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboTensach.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboTensach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboTensach.ItemHeight = 30;
-            this.cboTensach.Location = new System.Drawing.Point(142, 51);
-            this.cboTensach.Name = "cboTensach";
-            this.cboTensach.Size = new System.Drawing.Size(184, 36);
-            this.cboTensach.TabIndex = 70;
             // 
             // guna2HtmlLabel3
             // 
@@ -456,6 +441,26 @@
             this.datagridviewDT.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridviewDT.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // txtTensach
+            // 
+            this.txtTensach.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTensach.DefaultText = "";
+            this.txtTensach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTensach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTensach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTensach.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTensach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTensach.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTensach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTensach.Location = new System.Drawing.Point(142, 55);
+            this.txtTensach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTensach.Name = "txtTensach";
+            this.txtTensach.PasswordChar = '\0';
+            this.txtTensach.PlaceholderText = "";
+            this.txtTensach.SelectedText = "";
+            this.txtTensach.Size = new System.Drawing.Size(184, 33);
+            this.txtTensach.TabIndex = 86;
+            // 
             // frmBaocaodoanhthu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,11 +503,11 @@
         private Guna.UI2.WinForms.Guna2RadioButton rdbTheongay;
         private Guna.UI2.WinForms.Guna2TextBox txtGiaban;
         private Guna.UI2.WinForms.Guna2TextBox txtSoluong;
-        private Guna.UI2.WinForms.Guna2ComboBox cboTensach;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnTimkiem;
         private Guna.UI2.WinForms.Guna2DataGridView datagridviewDT;
+        private Guna.UI2.WinForms.Guna2TextBox txtTensach;
     }
 }
