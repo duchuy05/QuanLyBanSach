@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanvien));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnTimkiem = new Guna.UI2.WinForms.Guna2Button();
             this.btnBoqua = new Guna.UI2.WinForms.Guna2Button();
             this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
@@ -165,38 +165,38 @@
             this.mskSdtnv.Location = new System.Drawing.Point(722, 214);
             this.mskSdtnv.Mask = "(999) 000-0000";
             this.mskSdtnv.Name = "mskSdtnv";
-            this.mskSdtnv.Size = new System.Drawing.Size(178, 20);
+            this.mskSdtnv.Size = new System.Drawing.Size(178, 16);
             this.mskSdtnv.TabIndex = 63;
             // 
             // datagridviewNV
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.datagridviewNV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridviewNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.datagridviewNV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridviewNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.datagridviewNV.ColumnHeadersHeight = 16;
             this.datagridviewNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridviewNV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridviewNV.DefaultCellStyle = dataGridViewCellStyle6;
             this.datagridviewNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.datagridviewNV.Location = new System.Drawing.Point(-21, 283);
+            this.datagridviewNV.Location = new System.Drawing.Point(8, 275);
             this.datagridviewNV.Margin = new System.Windows.Forms.Padding(2);
             this.datagridviewNV.Name = "datagridviewNV";
             this.datagridviewNV.RowHeadersVisible = false;
             this.datagridviewNV.RowHeadersWidth = 51;
-            this.datagridviewNV.Size = new System.Drawing.Size(1116, 208);
+            this.datagridviewNV.Size = new System.Drawing.Size(1055, 208);
             this.datagridviewNV.TabIndex = 62;
             this.datagridviewNV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.datagridviewNV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -228,7 +228,7 @@
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(578, 210);
             this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(120, 25);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(100, 21);
             this.guna2HtmlLabel3.TabIndex = 61;
             this.guna2HtmlLabel3.Text = "Số điện thoại";
             // 
@@ -236,10 +236,10 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(633, 112);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(578, 112);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(65, 25);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(55, 21);
             this.guna2HtmlLabel2.TabIndex = 60;
             this.guna2HtmlLabel2.Text = "Địa chỉ";
             // 
@@ -250,7 +250,7 @@
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(107, 210);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(134, 25);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(109, 21);
             this.guna2HtmlLabel1.TabIndex = 59;
             this.guna2HtmlLabel1.Text = "Tên nhân viên";
             // 
@@ -261,7 +261,7 @@
             this.lblMasach.Location = new System.Drawing.Point(115, 112);
             this.lblMasach.Margin = new System.Windows.Forms.Padding(2);
             this.lblMasach.Name = "lblMasach";
-            this.lblMasach.Size = new System.Drawing.Size(126, 25);
+            this.lblMasach.Size = new System.Drawing.Size(104, 21);
             this.lblMasach.TabIndex = 58;
             this.lblMasach.Text = "Mã nhân viên";
             // 

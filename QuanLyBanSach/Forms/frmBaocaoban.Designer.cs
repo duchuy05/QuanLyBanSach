@@ -31,6 +31,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dtChonNgay = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.rdTheoNgay = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -50,8 +53,10 @@
             this.btnTim = new Guna.UI2.WinForms.Guna2Button();
             this.btnXuat = new Guna.UI2.WinForms.Guna2Button();
             this.dgridBCBan = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dgridTongSPBan = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgridBCBan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgridTongSPBan)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -402,6 +407,57 @@
             this.dgridBCBan.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgridBCBan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // dgridTongSPBan
+            // 
+            this.dgridTongSPBan.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgridTongSPBan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgridTongSPBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgridTongSPBan.ColumnHeadersHeight = 20;
+            this.dgridTongSPBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgridTongSPBan.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgridTongSPBan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgridTongSPBan.Location = new System.Drawing.Point(762, 332);
+            this.dgridTongSPBan.Name = "dgridTongSPBan";
+            this.dgridTongSPBan.RowHeadersVisible = false;
+            this.dgridTongSPBan.Size = new System.Drawing.Size(391, 286);
+            this.dgridTongSPBan.TabIndex = 6;
+            this.dgridTongSPBan.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgridTongSPBan.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgridTongSPBan.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgridTongSPBan.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgridTongSPBan.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgridTongSPBan.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgridTongSPBan.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgridTongSPBan.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgridTongSPBan.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgridTongSPBan.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dgridTongSPBan.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgridTongSPBan.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgridTongSPBan.ThemeStyle.HeaderStyle.Height = 20;
+            this.dgridTongSPBan.ThemeStyle.ReadOnly = false;
+            this.dgridTongSPBan.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgridTongSPBan.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgridTongSPBan.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dgridTongSPBan.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgridTongSPBan.ThemeStyle.RowsStyle.Height = 22;
+            this.dgridTongSPBan.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgridTongSPBan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
             // frmBaocaoban
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -418,6 +474,7 @@
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgridBCBan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgridTongSPBan)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -442,5 +499,6 @@
         private Guna.UI2.WinForms.Guna2RadioButton rdTheoNgay;
         private Guna.UI2.WinForms.Guna2RadioButton rdTheoKhoang;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtChonNgay;
+        private Guna.UI2.WinForms.Guna2DataGridView dgridTongSPBan;
     }
 }
